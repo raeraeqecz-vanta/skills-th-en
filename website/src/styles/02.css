@@ -1,0 +1,343 @@
+.section-icon {
+  width:45px;
+  height:45px;
+  border:1px solid #37313f;
+  background:#19171f;
+  color:var(--violet);
+  display:grid;
+  place-items:center;
+  flex:0 0 45px
+}
+.section-icon img {
+  width:29px;
+  height:29px;
+  object-fit:contain
+}
+.section-heading h2,.catalog-title h2 {
+  font-size:27px;
+  line-height:1.4;
+  letter-spacing:-.035em;
+  margin:0 0 4px;
+  font-weight:600
+}
+.section-heading p,.catalog-title p {
+  margin:0;
+  color:#9696a3;
+  font-size:13px
+}
+.route-tabs {
+  display:flex;
+  gap:5px;
+  margin:0 0 13px;
+  padding:4px;
+  width:max-content;
+  max-width:100%;
+  border:1px solid #2b2c35;
+  background:#0d0e12
+}
+.route-tabs button {
+  border:1px solid transparent;
+  background:transparent;
+  padding:9px 13px;
+  font-size:11px;
+  color:#a3a3af;
+  transition:.18s
+}
+.route-tabs button:hover {
+  color:#fff
+}
+.route-tabs button.active {
+  border-color:#484153;
+  background:#211d29;
+  color:#e4d8ff
+}
+.install-command {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  border:1px solid #34333e;
+  padding:15px 14px;
+  background:#0a0b0f;
+  min-height:69px;
+  box-shadow:inset 0 1px #ffffff05
+}
+.prompt {
+  font:15px var(--mono);
+  color:var(--lime)
+}
+.install-command code {
+  font:500 clamp(11px,1.8vw,14px) var(--mono);
+  overflow-wrap:anywhere;
+  flex:1;
+  color:#e5e4ea
+}
+.copy-button {
+  border:1px solid #494252;
+  background:#211d29;
+  color:#d7c5ff;
+  height:40px;
+  width:40px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  transition:background .18s
+}
+.copy-button:hover {
+  background:#312b40
+}
+.copy-status {
+  font-size:12px;
+  margin:9px 0;
+  color:var(--lime)
+}
+.copy-status.error {
+  border:1px solid #553c42;
+  padding:8px;
+  background:#1d1216;
+  color:#ffc1c7
+}
+.route-note {
+  margin:11px 0 25px;
+  color:#898a96;
+  font:10px var(--mono)
+}
+.skill-select {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0 0 13px;
+  color:#bbb9c5;
+  font-size:12px
+}
+.skill-select select {
+  background:#15161c;
+  border:1px solid #3a3a46;
+  padding:9px 11px;
+  max-width:min(100%,470px);
+  font:12px IBM Plex Sans Thai,sans-serif;
+  color:#eee
+}
+.install-steps {
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0 34px
+}
+.install-steps li {
+  display:flex;
+  gap:13px;
+  padding:16px 0;
+  border-top:1px solid #292a33
+}
+.install-steps>li>.step-icon {
+  width:34px;
+  height:34px;
+  flex-basis:34px;
+  border-color:#514264;
+  border-radius:10px;
+  box-shadow:0 0 0 3px #101116
+}
+.install-steps>li>.step-icon img {
+  width:21px;
+  height:21px
+}
+.install-steps strong {
+  font-size:12px;
+  font-weight:600;
+  color:#e6e5ec
+}
+.install-steps p {
+  margin:5px 0 0;
+  color:#92929e;
+  font-size:11px;
+  line-height:1.75
+}
+.install-steps code,.setup-callout code {
+  font:11px var(--mono);
+  color:#d3c2ff;
+  background:#1d1924;
+  border:1px solid #393143;
+  padding:3px 6px
+}
+.setup-callout {
+  margin-top:24px;
+  padding:17px 19px;
+  background:linear-gradient(100deg,#191620,#131419 60%);
+  border:1px solid #383142;
+  position:relative
+}
+.setup-callout:before {
+  content:"";
+  position:absolute;
+  left:0;
+  top:12px;
+  bottom:12px;
+  width:2px;
+  background:var(--cyan)
+}
+.setup-callout>span {
+  display:block;
+  color:#9d98a8;
+  font:10px var(--mono);
+  margin-bottom:10px
+}
+.setup-callout>code {
+  display:inline-block;
+  font-size:12px;
+  overflow-wrap:anywhere
+}
+.setup-callout p {
+  color:#a3a2ae;
+  font-size:11px;
+  margin:9px 0 0
+}
+.install-foot {
+  display:flex;
+  justify-content:space-between;
+  margin-top:22px;
+  color:#b8b7c2;
+  font:10px var(--mono)
+}
+.install-foot a {
+  text-decoration:underline;
+  text-decoration-color:#555361;
+  text-underline-offset:4px
+}
+.install-foot a:hover {
+  color:var(--violet)
+}
+.catalog-section {
+  background:#090a0d
+}
+.catalog-title {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:42px
+}
+.catalog-title h2 {
+  font-size:32px
+}
+.search-box {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:10px 12px;
+  border:1px solid #34343e;
+  color:#a9a9b5;
+  width:min(270px,42%);
+  background:#101116
+}
+.search-box input {
+  border:0;
+  outline:0;
+  background:transparent;
+  color:#f2f2f5;
+  width:100%;
+  font-size:12px
+}
+.search-box input::placeholder {
+  color:#777986
+}
+.search-box:focus-within {
+  outline:2px solid #8c77b6;
+  outline-offset:2px
+}
+.skill-group {
+  margin-top:42px
+}
+.group-heading {
+  display:flex;
+  gap:18px;
+  align-items:center;
+  margin-bottom:15px
+}
+.group-heading>.step-icon {
+  width:32px;
+  height:32px;
+  flex-basis:32px;
+  border-radius:9px;
+  box-shadow:none
+}
+.group-heading>.step-icon img {
+  width:19px;
+  height:19px
+}
+.group-heading>span {
+  font:11px var(--mono);
+  color:var(--violet)
+}
+.group-heading h3 {
+  font-size:19px;
+  margin:0;
+  font-weight:600;
+  letter-spacing:-.02em
+}
+.group-heading p {
+  font-size:11px;
+  color:#898a96;
+  margin:4px 0 0
+}
+.skill-list {
+  border-top:1px solid #2d2d37
+}
+.skill-row {
+  display:flex;
+  align-items:center;
+  gap:17px;
+  padding:17px 10px;
+  border-bottom:1px solid #252630;
+  transition:background .18s,padding .18s
+}
+.skill-row:hover {
+  background:linear-gradient(90deg,#14121a,#101116);
+  padding-left:15px
+}
+.skill-mark {
+  width:38px;
+  height:38px;
+  border:1px solid #37323f;
+  background:#17151d;
+  color:#c4b1ec;
+  display:grid;
+  place-items:center;
+  font:500 12px var(--mono);
+  flex-shrink:0
+}
+.skill-copy {
+  flex:1
+}
+.skill-copy>code {
+  font:10px var(--mono);
+  color:#9893a3
+}
+.skill-copy h4 {
+  font-family:IBM Plex Sans Thai,sans-serif;
+  font-size:14px;
+  margin:2px 0 3px;
+  font-weight:600;
+  color:#eeeef2
+}
+.skill-copy p {
+  font-family:IBM Plex Sans Thai,sans-serif;
+  font-size:11px;
+  color:#9899a5;
+  margin:0;
+  line-height:1.7
+}
+.row-arrow {
+  color:#8c8d99;
+  flex-shrink:0;
+  transition:transform .18s,color .18s
+}
+.skill-row:hover .row-arrow {
+  transform:translate(3px);
+  color:var(--cyan)
+}
+.empty {
+  color:#aaaab6;
+  padding:35px 0
+}

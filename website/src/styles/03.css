@@ -1,0 +1,342 @@
+footer {
+  padding:37px clamp(22px,10vw,158px) 32px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  align-items:center;
+  background:#0e0f13
+}
+footer p {
+  color:#9696a3;
+  font-size:11px;
+  line-height:1.8;
+  max-width:430px;
+  justify-self:end;
+  text-align:right
+}
+.copyright {
+  font:10px var(--mono);
+  color:#737580;
+  grid-column:1/-1;
+  margin-top:12px
+}
+.icon-attribution {
+  grid-column:1/-1;
+  color:#737580;
+  font-size:9px;
+  line-height:1.9
+}
+.icon-attribution a {
+  text-decoration:underline;
+  text-decoration-color:#494953;
+  text-underline-offset:3px
+}
+.icon-attribution a:hover {
+  color:var(--violet)
+}
+.button-primary:focus-visible,.text-link:focus-visible,.site-header a:focus-visible,.menu-toggle:focus-visible,.route-tabs button:focus-visible,.copy-button:focus-visible,.skill-row:focus-visible {
+  outline:2px solid var(--cyan);
+  outline-offset:3px
+}
+@media(max-width:760px) {
+  .site-header {
+    height:66px;
+    padding:0 19px
+  }
+  .menu-toggle {
+    display:grid
+  }
+  .site-header nav {
+    display:none;
+    position:absolute;
+    top:65px;
+    left:0;
+    right:0;
+    padding:15px 21px 20px;
+    background:#0f1015fa;
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    gap:10px
+  }
+  .site-header nav.open {
+    display:flex
+  }
+  .site-header nav a {
+    padding:8px 0
+  }
+  .hero {
+    padding:57px 22px 55px;
+    grid-template-columns:1fr;
+    gap:37px
+  }
+  .hero:before {
+    width:330px;
+    height:310px;
+    right:-20%;
+    top:0
+  }
+  .hero h1 {
+    font-size:clamp(39px,10.5vw,58px)
+  }
+  .hero-sub {
+    font-size:14px;
+    line-height:1.85;
+    margin:19px 0 24px
+  }
+  .hero-actions {
+    gap:9px
+  }
+  .button-primary,.text-link {
+    min-height:45px;
+    padding:10px 12px;
+    font-size:12px
+  }
+  .hero-meta {
+    flex-wrap:wrap;
+    row-gap:8px;
+    font-size:9px
+  }
+  .hero-side {
+    padding:18px
+  }
+  .flow-list>span {
+    padding:11px 2px
+  }
+  .flow-list span b {
+    font-size:12px
+  }
+  .install-section,.catalog-section {
+    padding:50px 22px 55px
+  }
+  .section-heading {
+    align-items:start;
+    gap:12px
+  }
+  .section-heading h2,.catalog-title h2 {
+    font-size:22px
+  }
+  .section-heading p,.catalog-title p {
+    font-size:11px;
+    line-height:1.65
+  }
+  .section-icon {
+    width:39px;
+    height:39px;
+    flex-basis:39px
+  }
+  .section-icon img {
+    width:25px;
+    height:25px
+  }
+  .route-tabs {
+    overflow:auto;
+    width:auto
+  }
+  .route-tabs button {
+    white-space:nowrap;
+    font-size:10px;
+    padding:9px 10px
+  }
+  .install-command {
+    padding:10px 9px;
+    gap:8px
+  }
+  .prompt {
+    font-size:12px
+  }
+  .copy-button {
+    width:35px;
+    height:35px
+  }
+  .route-note {
+    font-size:9px;
+    line-height:1.7
+  }
+  .install-steps {
+    grid-template-columns:1fr
+  }
+  .install-steps li {
+    padding:13px 0
+  }
+  .catalog-title {
+    align-items:start;
+    flex-direction:column;
+    margin-bottom:30px
+  }
+  .search-box {
+    width:100%
+  }
+  .skill-group {
+    margin-top:33px
+  }
+  .group-heading {
+    gap:11px
+  }
+  .group-heading h3 {
+    font-size:17px
+  }
+  .group-heading p {
+    font-size:10px;
+    line-height:1.7
+  }
+  .skill-row {
+    gap:11px;
+    padding:15px 2px
+  }
+  .skill-row:hover {
+    padding-left:5px
+  }
+  .skill-mark {
+    width:34px;
+    height:34px
+  }
+  .skill-copy>code {
+    font-size:9px
+  }
+  .skill-copy h4 {
+    font-size:13px
+  }
+  .skill-copy p {
+    font-size:10px
+  }
+  .row-arrow {
+    width:17px
+  }
+  footer {
+    padding:29px 22px 23px;
+    grid-template-columns:1fr;
+    gap:7px
+  }
+  footer p {
+    justify-self:start;
+    text-align:left;
+    margin:3px 0;
+    font-size:10px
+  }
+  .copyright {
+    grid-column:auto;
+    margin-top:11px
+  }
+  .install-foot {
+    font-size:9px;
+    gap:15px
+  }
+  .skill-select {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:6px
+  }
+}
+@media(max-width:375px) {
+  .hero-actions {
+    align-items:stretch;
+    flex-direction:column
+  }
+  .hero-actions>a {
+    justify-content:center
+  }
+  .hero-meta {
+    gap:8px
+  }
+  .flow-label {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:4px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*:before,*:after {
+    scroll-behavior:auto!important;
+    transition:none!important
+  }
+}
+.detail-page {
+  min-height:calc(100vh - 78px);
+  padding:50px clamp(22px,10vw,158px) 90px;
+  background:radial-gradient(ellipse at 74% 0%,#5538a01a,transparent 42%),var(--canvas)
+}
+.detail-back {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:9px 0;
+  border:0;
+  background:transparent;
+  color:#c1bacd;
+  font-size:14px
+}
+.detail-back:hover {
+  color:var(--cyan)
+}
+.detail-page article {
+  max-width:1080px;
+  margin:35px auto 0
+}
+.detail-hero {
+  display:flex;
+  align-items:flex-start;
+  gap:23px;
+  padding-bottom:36px;
+  border-bottom:1px solid var(--line)
+}
+.detail-hero .skill-icon {
+  width:76px;
+  height:76px;
+  flex:0 0 76px;
+  border:1px solid #55466d;
+  border-radius:16px;
+  background:linear-gradient(145deg,#1b1722,#111218);
+  display:grid;
+  place-items:center;
+  box-shadow:0 0 32px #a95bff20
+}
+.detail-hero .skill-icon img {
+  width:64px;
+  height:64px
+}
+.detail-group {
+  margin:0 0 8px;
+  color:var(--cyan);
+  font-size:13px
+}
+.detail-hero code {
+  font:13px var(--mono);
+  color:#a49caf
+}
+.detail-hero h1 {
+  font-size:clamp(35px,5vw,58px);
+  letter-spacing:-.045em;
+  line-height:1.25;
+  margin:8px 0;
+  color:#f6f4fa
+}
+.detail-summary {
+  font-size:18px;
+  line-height:1.8;
+  color:#aaaab6;
+  margin:0;
+  max-width:760px
+}
+.detail-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 340px;
+  gap:58px;
+  padding-top:36px
+}
+.detail-block {
+  padding:0 0 28px;
+  margin-bottom:25px;
+  border-bottom:1px solid #23242c
+}
+.detail-block h2,.detail-aside h2 {
+  font-size:20px;
+  letter-spacing:-.025em;
+  margin:0 0 12px;
+  color:#eeeef4
+}
+.detail-block>p {
+  font-size:15px;
+  line-height:1.9;
+  color:#b2b1bd;
+  margin:0
+}

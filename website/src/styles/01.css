@@ -1,0 +1,304 @@
+/*
+ * RECONSTRUCTED SOURCE BASELINE CANDIDATE
+ * Visual rules recovered from VANTA-SKILLS-TH-EN-WEBSITE-v0.7.5-dist.zip.
+ * Formatting restored for maintainability; runtime styling intent is preserved.
+ */
+@import"https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap";
+:root {
+  font-family:Inter,IBM Plex Sans Thai,sans-serif;
+  color:#f2f2f5;
+  background:#090a0d;
+  font-synthesis:none;
+  text-rendering:optimizeLegibility;
+  --canvas:#090a0d;
+  --surface:#101116;
+  --surface-2:#15161c;
+  --line:#252630;
+  --line-bright:#343540;
+  --ink:#f2f2f5;
+  --muted:#a1a1ae;
+  --soft:#777986;
+  --violet:#b79aff;
+  --cyan:#8fe2e5;
+  --lime:#c5ec81;
+  --mono:"DM Mono",monospace
+}
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:82px
+}
+body {
+  margin:0;
+  min-width:320px;
+  background:var(--canvas)
+}
+a {
+  color:inherit;
+  text-decoration:none
+}
+button,input,select {
+  font:inherit;
+  color:inherit
+}
+button {
+  cursor:pointer
+}
+main {
+  max-width:1600px;
+  margin:0 auto;
+  background:var(--canvas);
+  overflow:hidden
+}
+.site-header {
+  height:78px;
+  padding:0 clamp(22px,7.1vw,112px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:5;
+  background:#090a0de8;
+  -webkit-backdrop-filter:blur(18px);
+  backdrop-filter:blur(18px)
+}
+.brand {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:-.04em
+}
+.brand b {
+  font:500 13px var(--mono);
+  color:#a6a6b2;
+  letter-spacing:0
+}
+.brand-symbol {
+  position:relative;
+  width:34px;
+  height:34px;
+  border:1px solid #4b465f;
+  background:linear-gradient(145deg,#191720,#101116);
+  display:grid;
+  place-items:center;
+  font:600 17px var(--mono);
+  color:#d1c1ff;
+  box-shadow:inset 0 0 16px #b79aff18
+}
+.site-header nav {
+  display:flex;
+  gap:34px;
+  color:#b1b1bd;
+  font-size:13px
+}
+.site-header nav a {
+  padding:9px 0;
+  transition:color .18s
+}
+.site-header nav a:hover {
+  color:#fff
+}
+.site-header nav a span {
+  color:var(--violet)
+}
+.menu-toggle {
+  display:none;
+  background:#15161c;
+  border:1px solid var(--line);
+  width:42px;
+  height:42px;
+  place-items:center
+}
+.hero {
+  position:relative;
+  padding:106px clamp(22px,10vw,158px) 100px;
+  display:grid;
+  grid-template-columns:minmax(0,1.18fr) minmax(315px,.7fr);
+  gap:8%;
+  border-bottom:1px solid var(--line);
+  align-items:center;
+  isolation:isolate
+}
+.hero:before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:560px;
+  height:430px;
+  right:5%;
+  top:0;
+  background:radial-gradient(ellipse,#8d6be51b 0%,#5ed4d21a 32%,transparent 68%);
+  filter:blur(34px);
+  pointer-events:none
+}
+.hero h1 {
+  font-family:Inter,IBM Plex Sans Thai,sans-serif;
+  font-size:clamp(42px,6.1vw,76px);
+  line-height:1.24;
+  letter-spacing:-.055em;
+  font-weight:600;
+  margin:0;
+  max-width:790px;
+  color:#f8f8fb
+}
+.hero-sub {
+  font-size:16px;
+  line-height:1.9;
+  color:#aaaab6;
+  max-width:600px;
+  margin:25px 0 31px
+}
+.hero-actions {
+  display:flex;
+  align-items:center;
+  gap:13px
+}
+.button-primary,.text-link {
+  min-height:49px;
+  padding:12px 17px;
+  border:1px solid var(--line-bright);
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  font-size:13px;
+  font-weight:600;
+  transition:transform .18s,border-color .18s,background .18s
+}
+.button-primary {
+  background:#e4d8ff;
+  color:#171321;
+  border-color:#e4d8ff;
+  box-shadow:0 8px 28px #b79aff1c
+}
+.button-primary:hover {
+  transform:translateY(-2px);
+  background:#eee7ff
+}
+.text-link {
+  background:#101116;
+  color:#dddde5
+}
+.text-link:hover {
+  border-color:#646174;
+  background:#17171f
+}
+.hero-meta {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:30px;
+  color:#888995;
+  font-size:10px
+}
+.hero-meta i {
+  width:3px;
+  height:3px;
+  background:#7d7e89;
+  border-radius:50%
+}
+.hero-side {
+  position:relative;
+  border:1px solid #302c3a;
+  padding:22px 23px 19px;
+  background:linear-gradient(145deg,#15141b,#101116 70%);
+  box-shadow:0 18px 70px #0008
+}
+.hero-side:before {
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:2px;
+  background:linear-gradient(var(--violet),var(--cyan),transparent);
+  opacity:.75
+}
+.flow-label {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:0 0 16px
+}
+.flow-label span {
+  font:10px var(--mono);
+  letter-spacing:.12em;
+  color:var(--violet)
+}
+.flow-label b {
+  font-size:12px;
+  font-weight:500;
+  color:#d2d0da
+}
+.flow-list {
+  display:grid;
+  gap:0;
+  background:linear-gradient(#484052,#2a3034) 18px 16px/1px calc(100% - 32px) no-repeat
+}
+.flow-list>span {
+  position:relative;
+  display:flex;
+  gap:13px;
+  align-items:center;
+  padding:8px 2px;
+  border-bottom:1px solid #282730;
+  min-height:46px
+}
+.flow-list>span:last-child {
+  border:0
+}
+.step-icon {
+  width:36px;
+  height:36px;
+  display:inline-grid;
+  place-items:center;
+  flex:0 0 36px;
+  border:1px solid #57476f;
+  border-radius:11px;
+  background:linear-gradient(145deg,#211c2b,#121318);
+  box-shadow:0 0 0 3px #14131a,0 0 18px #b79aff12;
+  position:relative;
+  z-index:1
+}
+.step-icon img {
+  display:block;
+  width:22px;
+  height:22px;
+  object-fit:contain
+}
+.flow-list>span>b {
+  font-size:13px;
+  font-weight:500;
+  color:#e0dfe6
+}
+.flow-list>span:nth-child(2) .step-icon {
+  border-color:#567279
+}
+.flow-list>span:nth-child(4) .step-icon {
+  border-color:#65744d
+}
+.flow-caption {
+  font-size:10px;
+  line-height:1.8;
+  color:#858590;
+  border-top:1px solid #302c3a;
+  padding-top:14px;
+  margin-top:8px
+}
+.install-section,.catalog-section {
+  padding:79px clamp(22px,10vw,158px) 87px;
+  border-bottom:1px solid var(--line)
+}
+.install-section {
+  background:linear-gradient(180deg,#0d0e12,#101116 48%,#0d0e12)
+}
+.section-heading {
+  display:flex;
+  gap:16px;
+  align-items:center;
+  margin-bottom:27px
+}

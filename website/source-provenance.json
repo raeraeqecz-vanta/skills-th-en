@@ -1,0 +1,10 @@
+{
+  "status": "RECONSTRUCTED_SOURCE_BASELINE_CANDIDATE",
+  "repository": "raeraeqecz-vanta/skills-th-en",
+  "repositoryBaseCommitObserved": "5da20874d1d46f952bdcc4d37f88e546b0bdf1cf",
+  "sourceBase": "VANTA-SKILLS-TH-EN-WEBSITE-PREMIUM-v0.7.2.zip",
+  "runtimeReference": "VANTA-SKILLS-TH-EN-WEBSITE-v0.7.5-dist.zip",
+  "patchReference": "VANTA-SKILLS-TH-EN-WEBSITE-v0.7.6-rc.1-dist.zip",
+  "originalV075SourceVerified": false,
+  "notes": "v0.7.2 supplied the latest recoverable structured React/Vite source. v0.7.5 runtime features, detail metadata, icon assets, and visual CSS rules were recovered from the compiled dist. The v0.7.6 targeted fixes were then implemented at source level."
+}
