@@ -28,11 +28,16 @@ Recommended top-level collections:
 skills/
 ├── foundation/       # Context, capability, conflict, and routing
 ├── specification/    # Requirements, governed specs, and task breakdown
+├── design/           # User experience, interface, and design systems
 ├── implementation/   # Approved implementation and code review
 ├── documentation/    # Manuals and operational documentation
 ├── release/          # Release, handoff, and delivery readiness
-└── domains/          # Web, game, Roblox, business, research, and future domains
+└── domains/          # Domain-specific collections when a coherent set exists
 ```
+
+Each collection folder should contain a bilingual `README.md` that states its purpose and links to every skill in that folder. The repository-level [Skill Catalog](../skills/README.md) is the complete browseable index; add a catalog link whenever a skill is added or moved.
+
+ทุกโฟลเดอร์หมวดควรมี `README.md` สองภาษาที่อธิบายหน้าที่และลิงก์ไปยัง Skill ทุกตัวในหมวดนั้น ส่วน [Skill Catalog](../skills/README.md) เป็นสารบัญรวมของ Repository ต้องอัปเดตเมื่อเพิ่มหรือย้าย Skill
 
 ## 3. Foundation Skill / Skill ชั้นพื้นฐาน
 
