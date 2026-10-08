@@ -1,0 +1,13 @@
+interface:
+  display_name: ออกแบบ UI/UX อย่างมีหลัก / UI/UX Master Craft
+  short_description: ออกแบบและตรวจ UI ที่ชัดเจน เข้าถึงได้ และมีเอกลักษณ์
+  default_prompt: ใช้ @ui-ux-master-craft เพื่อออกแบบหรือตรวจทาน UI/UX โดยอิงงานจริงและหลักฐาน
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: false
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
