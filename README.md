@@ -1,6 +1,6 @@
 # VANTA Skills
 
-Thai–English governed AI skills for project context, specification, task breakdown, implementation, quality assurance, documentation, and release workflows.
+Thai–English governed AI skills for project context, specification, task breakdown, design, implementation, quality assurance, documentation, and release workflows.
 
 VANTA Skills is designed to make structured AI workflows easier to understand and use, while keeping governance, authority, evidence, and handoff rules explicit.
 
@@ -26,12 +26,14 @@ npx skills add raeraeqecz-vanta/skills-th-en --skill setup-skill-context
 
 ## Collections / หมวด Skill
 
-- `foundation/` — context, capability, reconciliation, routing
-- `specification/` — requirements, governed specs, task breakdown
-- `implementation/` — approved implementation and code review
-- `documentation/` — user manuals
-- `release/` — release and handoff
-- `domains/` — future domain-specific skills
+- [Skill Catalog / สารบัญ Skill](skills/README.md) — browse every collection and skill.
+- [Foundation / พื้นฐาน](skills/foundation/README.md) — project context, capability, reconciliation, and routing.
+- [Specification / ข้อกำหนด](skills/specification/README.md) — requirements, governed specs, and task breakdown.
+- [Design / การออกแบบ](skills/design/README.md) — user interface and experience design, critique, and design-system guidance.
+- [Implementation / การพัฒนา](skills/implementation/README.md) — approved implementation and code review.
+- [Documentation / เอกสาร](skills/documentation/README.md) — user manuals and operational documentation.
+- [Release / ส่งมอบ](skills/release/README.md) — release, handoff, and delivery readiness.
+- `domains/` — reserved for future domain-specific collections; create a domain collection when it has a coherent set of skills.
 
 ## Governance / การควบคุม
 
