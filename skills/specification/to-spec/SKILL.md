@@ -15,7 +15,7 @@ Turn evolving discussion, files, prior decisions, and approved baselines into a 
 
 `to-spec` is a **design/specification governance workflow**, not an automatic implementation command.
 
-> **Clarify → Structure → Reconcile → Specify → Verify → Gate → Freeze → Handoff**  
+> **Clarify → Structure → Reconcile → Specify → Verify → Gate → Freeze → Handoff**<br>
 > **ทำความชัดเจน → จัดโครงสร้าง → ตรวจความเข้ากันได้ → เขียนข้อกำหนด → ตรวจสอบ → ตั้ง Gate → Freeze → ส่งต่อ**
 
 ---
@@ -144,7 +144,7 @@ Examples / ตัวอย่าง:
 
 Before mutating code, runtime, repository, workspace, Roblox Studio, database, hosting, or external systems, require appropriate preflight and Owner approval.
 
-> **Build Contract ≠ Implementation Approval**  
+> **Build Contract ≠ Implementation Approval**<br>
 > **Build Contract ไม่เท่ากับการอนุมัติให้ลงมือสร้าง**
 
 ---
@@ -486,7 +486,7 @@ Domain-specific Behavior ควรอยู่ Project Layer / Adapter จนก
 
 Keep domain-specific behavior in project layers/adapters until repeated real use proves it should be promoted.
 
-> **Do not generalize first. Prove first, extract second.**  
+> **Do not generalize first. Prove first, extract second.**<br>
 > **อย่าทำ Generic ก่อน พิสูจน์การใช้งานจริงก่อน แล้วค่อย Extract**
 
 ---
@@ -518,19 +518,19 @@ For significant design work, keep chat summaries compact and decision-oriented.
 
 Recommended pattern / รูปแบบแนะนำ:
 
-**Status / สถานะ**  
+**Status / สถานะ**<br>
 - สิ่งที่เป็นจริงตอนนี้ / current truth
 
-**Locked / สิ่งที่ล็อกแล้ว**  
+**Locked / สิ่งที่ล็อกแล้ว**<br>
 - Frozen / Approved items
 
-**Open / Deferred / สิ่งที่ยังเปิด**  
+**Open / Deferred / สิ่งที่ยังเปิด**<br>
 - unresolved items
 
-**Conflict / ความขัดแย้ง**  
+**Conflict / ความขัดแย้ง**<br>
 - แสดงเฉพาะเมื่อมี / only when present
 
-**Next Action / ขั้นถัดไป**  
+**Next Action / ขั้นถัดไป**<br>
 - หนึ่งขั้นที่ชัดเจน / one concrete next step
 
 ไม่ต้องบังคับ Format นี้กับคำถามทั่วไปหรือ Casual Chat
