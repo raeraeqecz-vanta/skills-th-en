@@ -1,0 +1,61 @@
+name: Website Reconciliation CI
+
+on:
+  push:
+    branches:
+      - codex/website-source-reconciliation-v0.1
+  pull_request:
+    paths:
+      - 'website/**'
+      - '.github/workflows/website-reconciliation-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Generate lockfile candidate
+        run: npm install --package-lock-only --ignore-scripts
+
+      - name: Clean install from generated lockfile
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Capture verification metadata
+        run: |
+          node --version > verification.txt
+          npm --version >> verification.txt
+          git rev-parse HEAD >> verification.txt
+          sha256sum package-lock.json >> verification.txt
+          find dist -type f -print0 | sort -z | xargs -0 sha256sum >> verification.txt
+
+      - name: Upload reconciliation evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-reconciliation-evidence
+          path: |
+            website/package-lock.json
+            website/dist
+            website/verification.txt
+          if-no-files-found: error
+          retention-days: 7
