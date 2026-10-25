@@ -1,10 +1,46 @@
 {
-  "status": "RECONSTRUCTED_SOURCE_BASELINE_CANDIDATE",
+  "status": "RECONCILIATION_BASELINE_CANDIDATE",
+  "approval": "NOT_APPROVED_NOT_FROZEN",
   "repository": "raeraeqecz-vanta/skills-th-en",
   "repositoryBaseCommitObserved": "5da20874d1d46f952bdcc4d37f88e546b0bdf1cf",
+  "workingBranch": "codex/website-source-reconciliation-v0.1",
+  "workingBaseBranch": "feat/website-source-baseline-v0.7.6",
+  "workingBaseCommit": "e4fdd1469e37002c36aa6e58642c339852967b33",
+  "siblingCandidateBranch": "feat/website-source-baseline-v0.7.6-rc2",
+  "siblingCandidateCommit": "be5e5d7838f328db5230ad1e3ef03c49b3079c85",
   "sourceBase": "VANTA-SKILLS-TH-EN-WEBSITE-PREMIUM-v0.7.2.zip",
   "runtimeReference": "VANTA-SKILLS-TH-EN-WEBSITE-v0.7.5-dist.zip",
   "patchReference": "VANTA-SKILLS-TH-EN-WEBSITE-v0.7.6-rc.1-dist.zip",
   "originalV075SourceVerified": false,
-  "notes": "v0.7.2 supplied the latest recoverable structured React/Vite source. v0.7.5 runtime features, detail metadata, icon assets, and visual CSS rules were recovered from the compiled dist. The v0.7.6 targeted fixes were then implemented at source level."
+  "legacyProduction": {
+    "platform": "cloudflare-pages-direct-upload",
+    "project": "vanta-skills-th-en",
+    "deploymentId": "a63f847e-9de4-4f97-8d54-3b8f55dd9112",
+    "deploymentTrigger": "ad_hoc",
+    "gitCommitTraceable": false
+  },
+  "buildContract": {
+    "nodeVersion": "22.23.3",
+    "npmVersion": "10.9.9",
+    "lockfileCommitted": true,
+    "installCommand": "npm ci",
+    "testCommand": "npm test",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist"
+  },
+  "verification": {
+    "evidenceWorkflowRunId": 40169303745,
+    "evidenceHeadCommit": "7fff3fe6f541b1c2417da29b609dfdaa9e30757a",
+    "cleanInstall": "PASS",
+    "tests": "PASS",
+    "productionBuild": "PASS",
+    "lockfileDrift": "PASS",
+    "siblingJsByteIdentical": true,
+    "siblingCssByteIdentical": false,
+    "siblingCssWhitespaceNormalizedIdentical": true,
+    "siblingCssWorkingBytes": 19671,
+    "siblingCssRc2Bytes": 19670,
+    "legacyRuntimeVisualParity": "BLOCKED_BY_BROWSER_RENDERING_RATE_LIMIT"
+  },
+  "notes": "The reconstructed source remains a candidate rather than a historical-source claim. The v0.7.6 and v0.7.6-rc2 sibling candidates produce byte-identical JavaScript and whitespace-normalized-identical CSS bundles; the one-byte CSS size difference is attributable to whitespace under the current verification. Legacy Cloudflare Pages production is an ad-hoc Direct Upload deployment without a traceable Git commit, so it is retained as a runtime reference only. Visual parity against that legacy runtime remains unverified because the Browser Rendering verification request was rate-limited."
 }
