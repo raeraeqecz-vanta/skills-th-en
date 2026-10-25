@@ -2,7 +2,8 @@
 
 **Project:** SKILL / VANTA Skills  
 **Repository:** `raeraeqecz-vanta/skills-th-en`  
-**Status:** CANDIDATE — Project Execution Context Foundation v0.1
+**Ledger Version:** v0.1  
+**Purpose:** Durable record of Owner/governance decisions, separated from mutable execution state
 
 ## Purpose / วัตถุประสงค์
 
@@ -31,6 +32,8 @@
 - `REJECTED`
 - `CANDIDATE`
 
+> `CANDIDATE` หมายถึงแนวทางที่ถูกออกแบบ/เสนอไว้ แต่ยังห้ามตีความว่าเป็น Owner-approved governance จนกว่าจะมี explicit approval ที่ครอบคลุม decision นั้นจริง
+
 ---
 
 ## SKILL-DEC-001 — Canonical Repository
@@ -47,60 +50,61 @@
 ## SKILL-DEC-002 — Context Authority Separation
 
 **DATE:** 2026-10-26  
-**STATUS:** APPROVED  
+**STATUS:** CANDIDATE  
 **DECISION:** Project context แยก authority เป็น 4 หน้าที่หลัก: `AGENTS.md` สำหรับ startup/authority contract, `CONTEXT.md` สำหรับ stable context, `PROJECT_STATE.md` สำหรับ mutable execution state และ `DECISIONS.md` สำหรับ durable decisions.  
-**AUTHORITY:** Owner approval of Project Execution Context Foundation v0.1 next action  
+**AUTHORITY:** Proposed by Project Execution Context Foundation v0.1; implementation/review authorized, governance promotion not yet approved  
 **SCOPE:** Context architecture  
-**SUPERSEDES:** Ad-hoc session-only context recovery as the primary mechanism  
-**IMPACT:** Dynamic state ห้ามถูกเก็บเป็น permanent decision และ approved decisions ห้ามพึ่ง memory/session history เพียงอย่างเดียว
+**SUPERSEDES:** Ad-hoc session-only context recovery as the primary mechanism, if promoted  
+**IMPACT:** หากได้รับอนุมัติ Dynamic state จะไม่ถูกเก็บเป็น permanent decision และ approved decisions จะไม่พึ่ง memory/session history เพียงอย่างเดียว
 
 ## SKILL-DEC-003 — Evidence-First Startup
 
 **DATE:** 2026-10-26  
-**STATUS:** APPROVED  
-**DECISION:** งาน repository/project ต้องเริ่มจาก repository-local context และตรวจ dynamic evidence สดสำหรับ facts ที่เปลี่ยนได้ ก่อนใช้ historical conversation หรือ memory เป็น execution-state evidence.  
-**AUTHORITY:** Project governance direction + Owner-approved context foundation  
+**STATUS:** CANDIDATE  
+**DECISION:** งาน repository/project ควรเริ่มจาก repository-local context และตรวจ dynamic evidence สดสำหรับ facts ที่เปลี่ยนได้ ก่อนใช้ historical conversation หรือ memory เป็น execution-state evidence.  
+**AUTHORITY:** Proposed by Project Execution Context Foundation v0.1; aligned with existing project governance direction  
 **SCOPE:** AI/Agent startup and recovery  
 **SUPERSEDES:** None recorded  
-**IMPACT:** Branch HEAD, PR state, diff, test/build/deployment state ต้อง re-verify เมื่อมีผลต่อการตัดสินใจ
+**IMPACT:** หากได้รับอนุมัติ Branch HEAD, PR state, diff, test/build/deployment state ต้อง re-verify เมื่อมีผลต่อการตัดสินใจ
 
 ## SKILL-DEC-004 — Candidate-First Context Foundation
 
 **DATE:** 2026-10-26  
 **STATUS:** APPROVED  
 **DECISION:** `SKILL PROJECT EXECUTION CONTEXT FOUNDATION v0.1` ให้จัดทำบน isolated branch เพื่อ review ก่อน และยังไม่แก้ canonical `main` จนกว่าจะมี Owner approval สำหรับ promotion/merge แยกต่างหาก.  
-**AUTHORITY:** Latest explicit Owner approval in current work  
+**AUTHORITY:** Explicit Owner approval in current work  
 **SCOPE:** `AGENTS.md`, `CONTEXT.md`, `PROJECT_STATE.md`, `DECISIONS.md`  
 **SUPERSEDES:** None  
-**IMPACT:** การสร้างไฟล์บน candidate branch ได้รับอนุมัติ แต่ merge/release/deploy ไม่ได้รับอนุมัติจาก decision นี้
+**IMPACT:** การสร้าง/แก้ candidate files และเปิด Draft PR ได้รับอนุมัติ แต่ merge/release/deploy ไม่ได้รับอนุมัติจาก decision นี้
 
 ## SKILL-DEC-005 — Mutation Approval Boundary
 
 **DATE:** 2026-10-26  
-**STATUS:** APPROVED  
-**DECISION:** Default authority สำหรับ Skill/project workflows คือ `DISCOVER + PROPOSE`; `CREATE` และ `PUBLISH` ต้องอยู่ภายใต้ approval boundary ที่เหมาะสม โดย merge, deploy, production, auth, permission, secret, storage/database migration, billing และ irreversible actions ต้องมี explicit Owner approval.  
-**AUTHORITY:** Current Skill System Guide / project governance  
+**STATUS:** CANDIDATE  
+**DECISION:** Default authority สำหรับ Skill/project workflows ควรเป็น `DISCOVER + PROPOSE` เว้นแต่ Owner หรือ canonical governance จะให้อำนาจเพิ่มเติม; merge, deploy, production, auth, permission, secret, storage/database migration, billing และ irreversible actions ต้องมี explicit Owner approval.  
+**AUTHORITY:** Proposed by Project Execution Context Foundation v0.1 and informed by current Skill System Guide / project governance  
 **SCOPE:** Repository and external-system mutation  
-**SUPERSEDES:** Any assumption that tool access equals authorization  
-**IMPACT:** Capability signal, mergeability, connected tools หรือ existing credentials ไม่ถือเป็น permission อัตโนมัติ
+**SUPERSEDES:** Any assumption that tool access equals authorization, if promoted  
+**IMPACT:** หากได้รับอนุมัติ capability signal, mergeability, connected tools หรือ existing credentials จะไม่ถือเป็น permission อัตโนมัติ
 
 ## SKILL-DEC-006 — Candidate Documents Are Not Canonical State
 
 **DATE:** 2026-10-26  
-**STATUS:** APPROVED  
-**DECISION:** Open PR, candidate branch, reconciliation report หรือ draft specification เป็น evidence/reference แต่ไม่ถือเป็น canonical implementation state จนกว่าจะได้รับการ promote ตาม Owner-approved governance.  
-**AUTHORITY:** Project context governance  
+**STATUS:** CANDIDATE  
+**DECISION:** Open PR, candidate branch, reconciliation report หรือ draft specification ควรเป็น evidence/reference แต่ไม่ถือเป็น canonical implementation state จนกว่าจะได้รับการ promote ตาม Owner-approved governance.  
+**AUTHORITY:** Proposed by Project Execution Context Foundation v0.1; consistent with current review workflow  
 **SCOPE:** PRs, branches, reconciliation artifacts, future proposals  
 **SUPERSEDES:** None recorded  
-**IMPACT:** เอกสารจาก PR #11 ใช้เป็น evidence input ได้ แต่ไม่สามารถ override `main` หรือ current system evidence โดยตัวมันเอง
+**IMPACT:** หากได้รับอนุมัติ เอกสารจาก PR #11 ใช้เป็น evidence input ได้ แต่ไม่สามารถ override `main` หรือ current system evidence โดยตัวมันเอง
 
 ---
 
 ## Pending / Unresolved Decisions
 
-รายการต่อไปนี้ยังไม่ถูกตัดสินโดยไฟล์นี้และต้องตรวจ current evidence + Owner authority แยกต่างหาก:
+รายการต่อไปนี้ยังไม่ถือว่าได้รับอนุมัติจาก ledger นี้และต้องมี Owner authority แยกต่างหาก:
 
 - การ promote Project Execution Context Foundation v0.1 เข้า `main`
+- การ promote `SKILL-DEC-002`, `SKILL-DEC-003`, `SKILL-DEC-005`, `SKILL-DEC-006` จาก `CANDIDATE` เป็น `APPROVED`
 - สถานะสุดท้ายของ UI/UX candidate taxonomy
 - การ promote Website source candidate
 - ULTIMATE runnable repository/orchestration architecture
@@ -116,6 +120,8 @@
 3. เปลี่ยน status ของ decision เก่าเป็น `SUPERSEDED` เมื่อได้รับอนุมัติ
 4. ระบุผลกระทบต่อ baseline, state, docs, code และ downstream workstreams
 
-## Current Boundary
+## Governance Boundary
 
-Decision ledger นี้เป็น candidate บน isolated branch เท่านั้น การสร้างไฟล์นี้ไม่ใช่ approval สำหรับ merge, release หรือ deployment.
+การมี record อยู่ในไฟล์นี้ไม่ได้ทำให้ record นั้นเป็น `APPROVED` โดยอัตโนมัติ ต้องอ่าน `STATUS` และ `AUTHORITY` ของแต่ละ decision เสมอ
+
+Merge หรือ promotion ของตัวไฟล์เองก็ไม่ควรถูกตีความว่าเป็น approval ของ decision ที่ยังมีสถานะ `CANDIDATE` เว้นแต่ Owner ระบุชัดว่าการอนุมัตินั้นครอบคลุม decision เหล่านั้นด้วย
