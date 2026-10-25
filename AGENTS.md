@@ -2,8 +2,9 @@
 
 **Project:** SKILL / VANTA Skills  
 **Repository:** `raeraeqecz-vanta/skills-th-en`  
-**Status:** CANDIDATE — Project Execution Context Foundation v0.1  
-**Scope:** Repository-local AI startup, evidence, authority, mutation, and handoff rules
+**Version:** v0.1  
+**Scope:** Repository-local AI startup, evidence, authority, mutation, and handoff rules  
+**Activation:** This contract is authoritative when present on the canonical branch or explicitly adopted by the Owner for a working branch.
 
 ## 1. Purpose / วัตถุประสงค์
 
@@ -55,7 +56,7 @@ Dynamic facts must still be re-verified even when an older approved document men
 
 ## 5. Mutation Boundary / ขอบเขตการแก้ไข
 
-Default authority คือ `DISCOVER + PROPOSE`.
+Default authority คือ `DISCOVER + PROPOSE` เว้นแต่ Owner หรือ canonical governance จะให้อำนาจเพิ่มเติมอย่างชัดเจน
 
 ต้องมี Owner approval ที่ชัดเจนก่อน:
 
@@ -123,8 +124,8 @@ Default authority คือ `DISCOVER + PROPOSE`.
 - execution-critical evidence ขาดหรือ stale จนตัดสินใจอย่างปลอดภัยไม่ได้
 - task ต้องแตะ production, auth, secret, permission, billing, migration หรือ irreversible action โดยไม่มี explicit approval
 
-## 11. Current Foundation Boundary
+## 11. Governance Boundary
 
-Project Execution Context Foundation v0.1 นี้จัดทำเพื่อ review บน isolated branch เท่านั้น
+การมี tool access, mergeability หรือ credential ที่ใช้งานได้ **ไม่ถือเป็น authorization โดยอัตโนมัติ**.
 
-**It does not authorize merge to `main`, deployment, release, or production changes.**
+การ promote, merge, release, deploy หรือ production mutation ต้องเป็นไปตาม approval boundary ที่ใช้อยู่ ณ เวลานั้นและต้องตรวจ current evidence ก่อนทุกครั้ง
