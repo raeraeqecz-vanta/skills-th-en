@@ -2,8 +2,9 @@
 
 **Project:** SKILL / VANTA Skills  
 **Repository:** `raeraeqecz-vanta/skills-th-en`  
-**Status:** CANDIDATE — Project Execution Context Foundation v0.1  
-**Purpose:** Stable project identity, architecture boundaries, and source-of-truth model
+**Version:** v0.1  
+**Purpose:** Stable project identity, architecture boundaries, and source-of-truth model  
+**Activation:** This context is authoritative when present on the canonical branch or explicitly adopted by the Owner for a working branch.
 
 ## 1. Project Identity / ตัวตนโครงการ
 
@@ -95,8 +96,8 @@ Reconciliation reports, reviews, superseded plans และ investigation artifa
 
 เอกสารระบบหลักควรใช้ Thai–English เมื่อมีประโยชน์ต่อการใช้งานข้าม agent/platform โดยไม่จำเป็นต้องแปลทุกบรรทัดซ้ำหากทำให้เอกสารอ่านยาก
 
-## 10. Current Foundation Boundary
+## 10. Governance Boundary
 
-ไฟล์นี้เป็น Candidate Foundation สำหรับ review บน `codex/project-execution-context-foundation-v0.1`.
+ไฟล์นี้กำหนด stable context เท่านั้น ไม่ได้ให้สิทธิ์ merge, release, deploy หรือ production mutation โดยตัวมันเอง
 
-การมีไฟล์นี้บน candidate branch ไม่ถือเป็นการ promote ไปยัง `main`, release, deployment หรือ production change.
+Current execution authority, active work และ approval boundary ต้องอ่านจาก `PROJECT_STATE.md`, `DECISIONS.md` และหลักฐานสดที่เกี่ยวข้องร่วมกันเสมอ
