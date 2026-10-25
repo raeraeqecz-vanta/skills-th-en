@@ -3,6 +3,12 @@
   "approval": "NOT_APPROVED_NOT_FROZEN",
   "repository": "raeraeqecz-vanta/skills-th-en",
   "repositoryBaseCommitObserved": "5da20874d1d46f952bdcc4d37f88e546b0bdf1cf",
+  "canonicalMain": {
+    "synced": true,
+    "commit": "d5f3cf5054e6a104b7050757d2dddc421618d74c",
+    "syncPullRequest": 12,
+    "reconciliationBehindMainAfterSync": 0
+  },
   "workingBranch": "codex/website-source-reconciliation-v0.1",
   "workingBaseBranch": "feat/website-source-baseline-v0.7.6",
   "workingBaseCommit": "e4fdd1469e37002c36aa6e58642c339852967b33",
@@ -29,8 +35,8 @@
     "outputDirectory": "dist"
   },
   "verification": {
-    "evidenceWorkflowRunId": 40169303745,
-    "evidenceHeadCommit": "7fff3fe6f541b1c2417da29b609dfdaa9e30757a",
+    "evidenceWorkflowRunId": 40169373403,
+    "evidenceHeadCommit": "64bda64543b443335a8a3cdde203b531a7394db3",
     "cleanInstall": "PASS",
     "tests": "PASS",
     "productionBuild": "PASS",
@@ -42,5 +48,5 @@
     "siblingCssRc2Bytes": 19670,
     "legacyRuntimeVisualParity": "BLOCKED_BY_BROWSER_RENDERING_RATE_LIMIT"
   },
-  "notes": "The reconstructed source remains a candidate rather than a historical-source claim. The v0.7.6 and v0.7.6-rc2 sibling candidates produce byte-identical JavaScript and whitespace-normalized-identical CSS bundles; the one-byte CSS size difference is attributable to whitespace under the current verification. Legacy Cloudflare Pages production is an ad-hoc Direct Upload deployment without a traceable Git commit, so it is retained as a runtime reference only. Visual parity against that legacy runtime remains unverified because the Browser Rendering verification request was rate-limited."
+  "notes": "The reconstructed source remains a candidate rather than a historical-source claim. The reconciliation branch has been synchronized with canonical main through PR #12 and is no longer behind main. The v0.7.6 and v0.7.6-rc2 sibling candidates produce byte-identical JavaScript and whitespace-normalized-identical CSS bundles; the one-byte CSS size difference is attributable to whitespace under the current verification. Legacy Cloudflare Pages production is an ad-hoc Direct Upload deployment without a traceable Git commit, so it is retained as a runtime reference only. Visual parity against that legacy runtime remains unverified because the Browser Rendering verification request was rate-limited."
 }
