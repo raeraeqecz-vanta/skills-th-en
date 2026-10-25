@@ -95,6 +95,8 @@ jobs:
           RC2_CSS=$(find /tmp/skills-th-en-rc2/website/dist/assets -maxdepth 1 -type f -name '*.css' | head -n 1)
           CURRENT_JS=$(find website/dist/assets -maxdepth 1 -type f -name '*.js' | head -n 1)
           RC2_JS=$(find /tmp/skills-th-en-rc2/website/dist/assets -maxdepth 1 -type f -name '*.js' | head -n 1)
+          CURRENT_CSS_NORMALIZED=$(tr -d '[:space:]' < "$CURRENT_CSS" | sha256sum | awk '{print $1}')
+          RC2_CSS_NORMALIZED=$(tr -d '[:space:]' < "$RC2_CSS" | sha256sum | awk '{print $1}')
           {
             echo "working_branch=${GITHUB_REF_NAME}"
             echo "working_sha=${GITHUB_SHA}"
@@ -103,6 +105,11 @@ jobs:
             echo "rc2_css=${RC2_CSS}"
             sha256sum "$CURRENT_CSS" "$RC2_CSS"
             if cmp -s "$CURRENT_CSS" "$RC2_CSS"; then echo "css_byte_identical=true"; else echo "css_byte_identical=false"; fi
+            echo "working_css_normalized_sha256=${CURRENT_CSS_NORMALIZED}"
+            echo "rc2_css_normalized_sha256=${RC2_CSS_NORMALIZED}"
+            if [ "$CURRENT_CSS_NORMALIZED" = "$RC2_CSS_NORMALIZED" ]; then echo "css_whitespace_normalized_identical=true"; else echo "css_whitespace_normalized_identical=false"; fi
+            echo "first_css_byte_differences:"
+            cmp -l "$CURRENT_CSS" "$RC2_CSS" | head -n 20 || true
             echo "working_js=${CURRENT_JS}"
             echo "rc2_js=${RC2_JS}"
             sha256sum "$CURRENT_JS" "$RC2_JS"
