@@ -4,7 +4,7 @@
 **Repository:** `raeraeqecz-vanta/skills-th-en`  
 **State Type:** Mutable execution snapshot  
 **Last Verified:** 2026-10-26 (Asia/Bangkok)  
-**Status:** CANDIDATE — Project Execution Context Foundation v0.1 / REVIEW PASS
+**Status:** CANDIDATE — Project Execution Context Foundation v0.1 / AMENDMENTS APPLIED / FINAL RECHECK PENDING
 
 > This file is a recovery snapshot, not a permanent truth. Re-verify dynamic facts before execution-critical decisions.
 
@@ -26,12 +26,15 @@
 
 **Branch base:** `main@d5f3cf5054e6a104b7050757d2dddc421618d74c`
 
+**Draft PR:** `#13 — docs(context): add project execution context foundation v0.1`
+
 **Authorized scope for this work:**
 - create/review/refine `AGENTS.md`
 - create/review/refine `CONTEXT.md`
 - create/review/refine `PROJECT_STATE.md`
 - create/review/refine `DECISIONS.md`
 - inspect repository/PR evidence required to validate the context foundation
+- amend authority semantics identified during review
 
 **Not authorized by this work:**
 - merge to `main`
@@ -45,58 +48,67 @@
 
 | File | Role | Current state |
 |---|---|---|
-| `AGENTS.md` | Startup, authority, mutation, handoff contract | Candidate / review pass |
-| `CONTEXT.md` | Stable project identity and architecture context | Candidate / review pass |
-| `PROJECT_STATE.md` | Mutable current execution snapshot | Candidate / review pass |
-| `DECISIONS.md` | Durable decision ledger | Candidate / review pass |
+| `AGENTS.md` | Startup, authority, mutation, handoff contract | Candidate / promotion-safe wording applied |
+| `CONTEXT.md` | Stable project identity and architecture context | Candidate / promotion-safe wording applied |
+| `PROJECT_STATE.md` | Mutable current execution snapshot | Candidate / current amendment state |
+| `DECISIONS.md` | Durable decision ledger | Candidate / authority semantics corrected |
 
 ## 4. Other Active Candidate Workstreams / งาน Candidate อื่น
 
-Dynamic PR state was re-verified on 2026-10-26:
+Dynamic PR state was previously re-verified on 2026-10-26 and must be refreshed before any action that depends on it:
 
 ### PR #1 — Website Source Candidate
-- State: `OPEN / DRAFT / NOT MERGED`
+- Last verified state: `OPEN / DRAFT / NOT MERGED`
 - Head: `feat/website-source-baseline-v0.7.6-rc2`
-- Head SHA: `be5e5d7838f328db5230ad1e3ef03c49b3079c85`
+- Last verified head SHA: `be5e5d7838f328db5230ad1e3ef03c49b3079c85`
 - Recorded blocker: dependency lock + clean install/build/browser regression remain incomplete/unverified
 - Authority: **DO NOT MERGE / DO NOT DEPLOY** without separate approval
 
 ### PR #2 — UI/UX Skill + Catalog Candidate
-- State: `OPEN / DRAFT / NOT MERGED`
+- Last verified state: `OPEN / DRAFT / NOT MERGED`
 - Head: `codex/ui-ux-skill-catalog`
-- Head SHA: `8425d62ccb1e0882498722c01ceef40601e18a0b`
+- Last verified head SHA: `8425d62ccb1e0882498722c01ceef40601e18a0b`
 - Scope: proposed `design/` collection + `ui-ux-master-craft`, expanding candidate catalog to 12 Skills
 - Authority: candidate only; separate Owner acceptance/promotion decision required
 
 ### PR #11 — Current State Reconciliation
-- State: `OPEN / DRAFT / NOT MERGED`
+- Last verified state: `OPEN / DRAFT / NOT MERGED`
 - Head: `codex/current-state-reconciliation-v0.1`
-- Head SHA: `1c5d8ae9b51c040b6b28b3985b0ad99fad06f679`
+- Last verified head SHA: `1c5d8ae9b51c040b6b28b3985b0ad99fad06f679`
 - Contains: SCR-001 through SCR-008 reconciliation artifacts
-- Important freshness note: PR #11 started from `main@5da20874...`, while current `main` verified for this foundation is `d5f3cf505...`
+- Important freshness note: PR #11 started from `main@5da20874...`, while current foundation started from `main@d5f3cf505...`
 - Authority: evidence/reference candidate; not canonical `main`
+
+### PR #13 — Project Execution Context Foundation
+- Current work PR
+- Draft / not merged
+- Contains only the four root context Markdown files
+- Authority: review candidate only; merge requires separate explicit Owner approval
 
 ## 5. Confirmed / ยืนยันแล้ว
 
 - Canonical repository identity and default branch are verified
-- Current `main` HEAD at foundation start is verified
-- PR #1, #2 and #11 are open Draft PRs and not merged
+- Foundation branch was created from verified `main@d5f3cf5054e6a104b7050757d2dddc421618d74c`
 - Project already contains `setup-skill-context` and `reconcile-work-context` foundation Skills
 - Project already contains `docs/SKILL-SYSTEM-GUIDE_v0.1_TH-EN.md`
 - Prior reconciliation artifacts exist in PR #11 and can be used as evidence/reference
-- The Owner approved creation of Project Execution Context Foundation v0.1 on an isolated branch for review
-- Candidate diff is context-only: four root Markdown files; no Skill source, Website source, runtime, deployment or production files changed
+- The Owner approved creation, review, Draft PR preparation, and the current amendment pass for Project Execution Context Foundation v0.1
+- Candidate diff is context-only; no Skill source, Website source, runtime, deployment or production files are intentionally changed
+- Review identified authority-semantics issues; approved amendments have now been applied on the candidate branch
 
 ## 6. Stale / Conflict / Unknown / สถานะผิดปกติ
 
 ### STALE
 - Reconciliation snapshot in PR #11 records an older `main` baseline (`5da20874...`) and must not be used as current HEAD evidence without refresh
+- Any PR state or SHA recorded in this snapshot must be refreshed before execution-critical use
 
 ### CONFLICT
-- No blocking conflict identified for the four-file context foundation
+- No blocking conflict has been identified so far for the four-file context foundation
 
 ### UNCONFIRMED / PENDING
+- Final Governance Recheck result after the authority-semantics amendments
 - Whether this four-file context foundation will be promoted into `main`
+- Whether candidate decisions `SKILL-DEC-002`, `003`, `005`, `006` will later receive explicit Owner approval
 - Whether PR #11 should later be refreshed, superseded, partially absorbed, or retained as historical reconciliation evidence
 - Final Owner decision for PR #2 taxonomy
 - Final Website candidate promotion path
@@ -133,33 +145,30 @@ Do not silently update Approved/Frozen decisions because runtime evidence change
 
 ## 9. Approval Boundary / ขอบเขตอนุมัติ
 
-**Currently allowed:** candidate context design, repository evidence inspection, branch-local documentation refinement and review.
+**Currently allowed:** candidate context design, repository evidence inspection, branch-local documentation refinement, governance review, and Final Governance Recheck.
 
 **Owner approval still required before:** merge into `main`, release/deploy, production changes, external resource mutation outside the approved candidate work, or changing an Approved/Frozen baseline.
 
-## 10. Context Foundation Review / ผลตรวจ Foundation
+## 10. Amendment Record / ผลการแก้จาก Review
 
-**Review result:** `PASS — READY FOR OWNER PROMOTION DECISION`
+Review result before amendment: `AMEND`
 
-Review checks completed:
+Applied fixes:
 
-- four-file role separation is explicit and non-overlapping
-- startup sequence aligns with existing `setup-skill-context` behavior
-- evidence/authority model aligns with `reconcile-work-context`
-- mutation boundary aligns with the Skill System Guide
-- candidate vs canonical distinction is explicit
-- stale reconciliation baseline is disclosed rather than silently adopted
-- branch diff contains only the four context Markdown files
-- no source/runtime/deployment/production mutation was introduced
-
-No Critical or High blocker was identified in this review.
+- removed branch-only/candidate-only wording from stable files that would become stale after merge
+- replaced with durable version/activation semantics in `AGENTS.md` and `CONTEXT.md`
+- changed `SKILL-DEC-002`, `003`, `005`, `006` from `APPROVED` to `CANDIDATE`
+- clarified that file presence or merge does not automatically approve candidate decisions
+- retained only decisions with direct current evidence/explicit approval as `APPROVED`
 
 ## 11. Next Action / ขั้นถัดไป
 
-Owner promotion decision for `SKILL PROJECT EXECUTION CONTEXT FOUNDATION v0.1`:
+Perform **Final Governance Recheck** of PR #13 after amendments:
 
-- `APPROVE` → prepare Draft PR / promotion path to `main` for review; do not merge automatically
-- `AMEND` → revise the four candidate files on this branch and recheck
-- `HOLD` → retain branch as candidate without changing `main`
+- verify current `main` and PR #13 head
+- compare PR #13 against current `main`
+- confirm changed-file boundary
+- review authority semantics and promotion safety
+- return `PASS`, `AMEND`, or `BLOCKED`
 
 **No merge is authorized by the current state.**
