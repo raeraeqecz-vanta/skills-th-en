@@ -59,3 +59,61 @@ jobs:
             website/verification.txt
           if-no-files-found: error
           retention-days: 7
+
+  compare-rc2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout working candidate
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build working candidate
+        working-directory: website
+        run: |
+          npm ci
+          npm run build
+
+      - name: Fetch rc2 sibling candidate
+        run: |
+          git fetch --depth=1 origin feat/website-source-baseline-v0.7.6-rc2
+          git worktree add /tmp/skills-th-en-rc2 FETCH_HEAD
+
+      - name: Build rc2 sibling candidate
+        working-directory: /tmp/skills-th-en-rc2/website
+        run: |
+          npm install --package-lock-only --ignore-scripts
+          npm ci
+          npm run build
+
+      - name: Compare bundled output
+        run: |
+          CURRENT_CSS=$(find website/dist/assets -maxdepth 1 -type f -name '*.css' | head -n 1)
+          RC2_CSS=$(find /tmp/skills-th-en-rc2/website/dist/assets -maxdepth 1 -type f -name '*.css' | head -n 1)
+          CURRENT_JS=$(find website/dist/assets -maxdepth 1 -type f -name '*.js' | head -n 1)
+          RC2_JS=$(find /tmp/skills-th-en-rc2/website/dist/assets -maxdepth 1 -type f -name '*.js' | head -n 1)
+          {
+            echo "working_branch=${GITHUB_REF_NAME}"
+            echo "working_sha=${GITHUB_SHA}"
+            echo "rc2_sha=$(git -C /tmp/skills-th-en-rc2 rev-parse HEAD)"
+            echo "working_css=${CURRENT_CSS}"
+            echo "rc2_css=${RC2_CSS}"
+            sha256sum "$CURRENT_CSS" "$RC2_CSS"
+            if cmp -s "$CURRENT_CSS" "$RC2_CSS"; then echo "css_byte_identical=true"; else echo "css_byte_identical=false"; fi
+            echo "working_js=${CURRENT_JS}"
+            echo "rc2_js=${RC2_JS}"
+            sha256sum "$CURRENT_JS" "$RC2_JS"
+            if cmp -s "$CURRENT_JS" "$RC2_JS"; then echo "js_byte_identical=true"; else echo "js_byte_identical=false"; fi
+            wc -c "$CURRENT_CSS" "$RC2_CSS" "$CURRENT_JS" "$RC2_JS"
+          } | tee website/rc2-comparison.txt
+
+      - name: Upload rc2 comparison evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-rc2-comparison
+          path: website/rc2-comparison.txt
+          if-no-files-found: error
+          retention-days: 7
