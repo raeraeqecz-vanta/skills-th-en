@@ -3,6 +3,7 @@
   "version": "0.7.6-rc.2",
   "private": true,
   "type": "module",
+  "packageManager": "npm@10.9.9",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "prebuild": "node scripts/generate-build-info.mjs",
