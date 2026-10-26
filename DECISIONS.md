@@ -97,16 +97,27 @@
 **SUPERSEDES:** None recorded  
 **IMPACT:** หากได้รับอนุมัติ เอกสารจาก PR #11 ใช้เป็น evidence input ได้ แต่ไม่สามารถ override `main` หรือ current system evidence โดยตัวมันเอง
 
+## SKILL-DEC-007 — Context Foundation Promotion to Main
+
+**DATE:** 2026-10-26  
+**STATUS:** APPROVED  
+**DECISION:** Promote the reviewed `SKILL PROJECT EXECUTION CONTEXT FOUNDATION v0.1` into canonical `main` via PR #13 after final pre-merge freshness verification.  
+**AUTHORITY:** Explicit Owner merge approval + verified GitHub merge evidence  
+**SCOPE:** `AGENTS.md`, `CONTEXT.md`, `PROJECT_STATE.md`, `DECISIONS.md`  
+**SUPERSEDES:** None; completes the promotion gate defined by `SKILL-DEC-004`  
+**IMPACT:** The four context files are now present on canonical `main`. This does **not** promote `SKILL-DEC-002`, `003`, `005`, or `006`; those records remain `CANDIDATE` until separately approved.  
+**EVIDENCE / NOTES:** PR #13 merged successfully; canonical merge commit `41e804533610282dc0a3e1bd3b47c8c5b135ca0e`.
+
 ---
 
 ## Pending / Unresolved Decisions
 
 รายการต่อไปนี้ยังไม่ถือว่าได้รับอนุมัติจาก ledger นี้และต้องมี Owner authority แยกต่างหาก:
 
-- การ promote Project Execution Context Foundation v0.1 เข้า `main`
 - การ promote `SKILL-DEC-002`, `SKILL-DEC-003`, `SKILL-DEC-005`, `SKILL-DEC-006` จาก `CANDIDATE` เป็น `APPROVED`
-- สถานะสุดท้ายของ UI/UX candidate taxonomy
-- การ promote Website source candidate
+- สถานะสุดท้ายของ UI/UX candidate taxonomy / PR #2
+- การ promote Website source candidate / PR #1
+- สถานะระยะยาวของ reconciliation candidate / PR #11
 - ULTIMATE runnable repository/orchestration architecture
 - Codex Cloud rollout / distribution architecture
 - restricted distribution / entitlement implementation
