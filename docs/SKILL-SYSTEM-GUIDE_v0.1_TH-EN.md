@@ -28,15 +28,37 @@ Recommended top-level collections:
 skills/
 ├── foundation/       # Context, capability, conflict, and routing
 ├── specification/    # Requirements, governed specs, and task breakdown
+├── design/           # User experience, interface, and design systems
 ├── implementation/   # Approved implementation and code review
 ├── documentation/    # Manuals and operational documentation
 ├── release/          # Release, handoff, and delivery readiness
-└── domains/          # Web, game, Roblox, business, research, and future domains
+└── domains/          # Domain-specific collections when a coherent set exists
 ```
+
+Each collection folder should contain a bilingual `README.md` that states its purpose and links to every skill in that folder. The repository-level [Skill Catalog](../skills/README.md) is the complete browseable index; add a catalog link whenever a skill is added or moved.
+
+ทุกโฟลเดอร์หมวดควรมี `README.md` สองภาษาที่อธิบายหน้าที่และลิงก์ไปยัง Skill ทุกตัวในหมวดนั้น ส่วน [Skill Catalog](../skills/README.md) เป็นสารบัญรวมของ Repository ต้องอัปเดตเมื่อเพิ่มหรือย้าย Skill
+
+### Canonical repository context / บริบทหลักของ Repository
+
+เมื่อ root context files อยู่บน canonical branch ให้ถือบทบาทตามนี้:
+
+- `AGENTS.md` — startup, authority, mutation, and handoff contract
+- `CONTEXT.md` — stable project identity and architecture boundaries
+- `PROJECT_STATE.md` — mutable current execution snapshot
+- `DECISIONS.md` — durable decision ledger with explicit status per record
+
+Skill System Guide อธิบายมาตรฐานร่วมของ Skill แต่ **ไม่แทนที่** authority/current-state model ของไฟล์ทั้งสี่ และ Skill ใด ๆ ห้ามสร้าง parallel governance ที่ขัดกับ canonical context โดยไม่มี Owner decision ที่ชัดเจน
+
+When these root files are present on the canonical branch, the Skill System Guide remains a shared behavioral standard; it does **not** replace their authority/current-state roles. Skill-local rules must not create a conflicting parallel governance model without an explicit Owner decision.
 
 ## 3. Foundation Skill / Skill ชั้นพื้นฐาน
 
 `setup-skill-context` is the required context entry point for a new project, a newly installed Skill set, or an uncertain working state.
+
+When canonical root context files are available, `setup-skill-context` and other Skills must read and respect them before using session history or inference as execution-state authority.
+
+เมื่อมี canonical root context files ให้ `setup-skill-context` และ Skill อื่นอ่านและเคารพไฟล์เหล่านั้นก่อนใช้ประวัติห้องแชทหรือการอนุมานเป็น execution-state authority
 
 หน้าที่หลัก:
 
@@ -230,6 +252,6 @@ Invocation must follow the active platform. Do not assume ChatGPT and Codex expo
 
 1. ใช้ Guide นี้เป็นมาตรฐานกลางของ `VANTA Skills`
 2. รักษา `setup-skill-context` เป็น Foundation Skill สำหรับการเริ่มบริบท
-3. รักษา Shared Context Contract ใน Skill ทุกตัว
+3. รักษา Shared Context Contract ใน Skill ทุกตัวโดยไม่ขัดกับ canonical root context files
 4. ตรวจชื่อ โครงสร้าง และเอกสารติดตั้งให้ตรงกับ `raeraeqecz-vanta/skills-th-en`
 5. ทดสอบการส่งต่อระหว่าง ChatGPT และ Codex ตามแพลตฟอร์มที่รองรับ
