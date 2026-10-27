@@ -1,6 +1,6 @@
 # VANTA Skills
 
-Thai–English governed AI skills for project context, specification, task breakdown, implementation, quality assurance, documentation, and release workflows.
+Thai–English governed AI skills for project context, specification, task breakdown, design, implementation, quality assurance, documentation, and release workflows.
 
 VANTA Skills is designed to make structured AI workflows easier to understand and use, while keeping governance, authority, evidence, and handoff rules explicit.
 
@@ -26,18 +26,24 @@ npx skills add raeraeqecz-vanta/skills-th-en --skill setup-skill-context
 
 ## Collections / หมวด Skill
 
-- `foundation/` — context, capability, reconciliation, routing
-- `specification/` — requirements, governed specs, task breakdown
-- `implementation/` — approved implementation and code review
-- `documentation/` — user manuals
-- `release/` — release and handoff
-- `domains/` — future domain-specific skills
+- [Skill Catalog / สารบัญ Skill](skills/README.md) — browse every collection and skill.
+- [Foundation / พื้นฐาน](skills/foundation/README.md) — project context, capability, reconciliation, and routing.
+- [Specification / ข้อกำหนด](skills/specification/README.md) — requirements, governed specs, and task breakdown.
+- [Design / การออกแบบ](skills/design/README.md) — user interface and experience design, critique, and design-system guidance.
+- [Implementation / การพัฒนา](skills/implementation/README.md) — approved implementation and code review.
+- [Documentation / เอกสาร](skills/documentation/README.md) — user manuals and operational documentation.
+- [Release / ส่งมอบ](skills/release/README.md) — release, handoff, and delivery readiness.
+- `domains/` — reserved for future domain-specific collections; create a domain collection when it has a coherent set of skills.
 
 ## Governance / การควบคุม
 
 ทุก Skill ต้องตรวจบริบท ความสามารถ ทรัพยากร สิทธิ์ และงานที่อาจชนกันก่อนดำเนินการ การตรวจพบ Connection ไม่เท่ากับการได้รับอนุญาตให้ใช้หรือแก้ไขระบบ
 
 Every Skill must inspect context, capabilities, resources, permissions, and possible conflicts before execution. A detected connection is not authorization to use or mutate a system.
+
+Repository-local authority and current-state recovery are defined by the canonical root context files when present: `AGENTS.md`, `CONTEXT.md`, `PROJECT_STATE.md`, and `DECISIONS.md`. Skill-local behavior must not override those authority boundaries silently.
+
+เมื่อมีไฟล์บริบทหลักบน canonical branch ให้ใช้ `AGENTS.md`, `CONTEXT.md`, `PROJECT_STATE.md` และ `DECISIONS.md` เป็นฐานสำหรับ authority และ current state โดย Skill แต่ละตัวห้ามข้ามขอบเขตดังกล่าวแบบเงียบ ๆ
 
 ดูมาตรฐานกลางได้ที่ [Skill System Guide](docs/SKILL-SYSTEM-GUIDE_v0.1_TH-EN.md).
 
