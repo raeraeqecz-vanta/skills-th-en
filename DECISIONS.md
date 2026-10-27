@@ -108,6 +108,17 @@
 **IMPACT:** The four context files are now present on canonical `main`. This does **not** promote `SKILL-DEC-002`, `003`, `005`, or `006`; those records remain `CANDIDATE` until separately approved.  
 **EVIDENCE / NOTES:** PR #13 merged successfully; canonical merge commit `41e804533610282dc0a3e1bd3b47c8c5b135ca0e`.
 
+## SKILL-DEC-008 — UI/UX Skill Catalog Promotion to Main
+
+**DATE:** 2026-10-27  
+**STATUS:** APPROVED  
+**DECISION:** Promote the refreshed UI/UX Skill + repository catalog candidate into canonical `main` via PR #2 after amendment, final content/Skill validation, and final pre-merge freshness verification.  
+**AUTHORITY:** Explicit Owner merge approval + verified GitHub merge evidence  
+**SCOPE:** `design/` collection, `ui-ux-master-craft`, repository Skill catalog/collection indexes, root `README.md`, and Skill System Guide taxonomy updates; 14 changed files total  
+**SUPERSEDES:** The pre-promotion candidate status of PR #2  
+**IMPACT:** Canonical Skill inventory now includes the UI/UX design collection and `ui-ux-master-craft`, bringing the indexed catalog to 12 Skills. Downstream presentation consumers such as the Website candidate must be reconciled against this catalog before promotion. This decision grants no deployment, production, auth, secret, database/storage, billing, or external publication authority.  
+**EVIDENCE / NOTES:** PR #2 merged successfully; canonical squash merge commit `ef5e014bf098a2c53f5b967cca028c1d3847d311`. Final pre-merge relation was `ahead 1 / behind 0`, with the intended 14-file boundary.
+
 ---
 
 ## Pending / Unresolved Decisions
@@ -115,7 +126,6 @@
 รายการต่อไปนี้ยังไม่ถือว่าได้รับอนุมัติจาก ledger นี้และต้องมี Owner authority แยกต่างหาก:
 
 - การ promote `SKILL-DEC-002`, `SKILL-DEC-003`, `SKILL-DEC-005`, `SKILL-DEC-006` จาก `CANDIDATE` เป็น `APPROVED`
-- สถานะสุดท้ายของ UI/UX candidate taxonomy / PR #2
 - การ promote Website source candidate / PR #1
 - สถานะระยะยาวของ reconciliation candidate / PR #11
 - ULTIMATE runnable repository/orchestration architecture
