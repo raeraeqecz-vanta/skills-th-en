@@ -119,6 +119,17 @@
 **IMPACT:** Canonical Skill inventory now includes the UI/UX design collection and `ui-ux-master-craft`, bringing the indexed catalog to 12 Skills. Downstream presentation consumers such as the Website candidate must be reconciled against this catalog before promotion. This decision grants no deployment, production, auth, secret, database/storage, billing, or external publication authority.  
 **EVIDENCE / NOTES:** PR #2 merged successfully; canonical squash merge commit `ef5e014bf098a2c53f5b967cca028c1d3847d311`. Final pre-merge relation was `ahead 1 / behind 0`, with the intended 14-file boundary.
 
+## SKILL-DEC-009 — Website Source Promotion to Main
+
+**DATE:** 2026-10-30  
+**STATUS:** APPROVED  
+**DECISION:** Promote the refreshed reconstructed Website source `v0.7.6-rc.3` into canonical `main` via PR #1 after synchronizing the Website presentation layer to the canonical 12-Skill catalog and completing fresh install, test, production-build, and browser-regression verification.  
+**AUTHORITY:** Explicit Owner merge approval + verified GitHub merge evidence  
+**SCOPE:** `website/` only; 45 changed files including React/Vite source, 12-Skill presentation metadata, UI/UX Skill icon/detail integration, tests, provenance metadata, and tracked `package-lock.json`  
+**SUPERSEDES:** The pre-promotion repository status of PR #1 as an unmerged Website source candidate  
+**IMPACT:** The reconstructed Website source is now the canonical current Website source on `main`. This promotion does **not** declare the reconstructed source an `APPROVED` or `FROZEN` Website baseline, does not erase its reconstruction provenance, and grants no deploy, publish, production, auth, secret, database/storage, billing, or other external mutation authority.  
+**EVIDENCE / NOTES:** PR #1 squash-merged successfully; canonical merge commit `7919801d4e05e35b568cb1827b619de741f7f22f`. Final pre-merge relation was `ahead 1 / behind 0`, `mergeable=true`, and all 45 changed files were under `website/`. Verification evidence includes RED run `40851389053`, GREEN/full run `40851733957`, and final tracked-lockfile verification run `40852160592` covering `npm ci`, full source tests, production build, and Chromium browser regression smoke. `website/README.md` and `website/source-provenance.json` intentionally retain reconstructed-candidate provenance language; a future Approved/Frozen Website baseline requires a separate Owner decision.
+
 ---
 
 ## Pending / Unresolved Decisions
@@ -126,7 +137,7 @@
 รายการต่อไปนี้ยังไม่ถือว่าได้รับอนุมัติจาก ledger นี้และต้องมี Owner authority แยกต่างหาก:
 
 - การ promote `SKILL-DEC-002`, `SKILL-DEC-003`, `SKILL-DEC-005`, `SKILL-DEC-006` จาก `CANDIDATE` เป็น `APPROVED`
-- การ promote Website source candidate / PR #1
+- การตัดสินว่า reconstructed Website source ควรถูกยกระดับเป็น `APPROVED` หรือ `FROZEN` Website baseline หรือไม่
 - สถานะระยะยาวของ reconciliation candidate / PR #11
 - ULTIMATE runnable repository/orchestration architecture
 - Codex Cloud rollout / distribution architecture
