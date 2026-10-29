@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">UI/UX Master Craft</title>
+  <desc id="desc">A layout frame with a focal point and alignment guides.</desc>
+  <rect x="5" y="7" width="38" height="34" rx="3" stroke="#5CE0C1" stroke-width="2"/>
+  <path d="M5 15h38M14 15v26M20 22h17M20 28h11M20 34h14" stroke="#AAB8C5" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="10" cy="11" r="1" fill="#F0B35B"/>
+  <circle cx="24" cy="28" r="3" stroke="#F0B35B" stroke-width="2"/>
+</svg>
