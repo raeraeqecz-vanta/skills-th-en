@@ -14,7 +14,7 @@ Repository นี้เป็น canonical public repository สำหรับ 
 
 ## 2. Primary Mission / เป้าหมายหลัก
 
-ทำให้ผู้ใช้ โดยเฉพาะผู้ใช้ภาษาไทย สามารถติดตั้ง เข้าใจ และใช้ AI Skills ที่มี governance, context awareness, evidence discipline, approval gates และ handoff ที่ชัดเจนได้ง่าย โดยไม่ผูกตรรกะหลักกับ agent platform เดียว
+ทำให้ผู้ใช้ โดยเฉพาะผู้ใช้ภาษาไทย สามารถติดตั้ง เข้าใจ และใช้ AI Skills ที่มี governance, context awareness, evidence discipline, approval gates และ handoff ที่ชัดเจนได้ง่าย โดยไม่ผูกตรรกะหลักกับ agent platform เดียว และโดยให้ตัว Skill ทุกตัวใช้งานได้ฟรีตาม Free Access Invariant ของโครงการ
 
 ## 3. Stable Architecture Boundaries / ขอบเขตสถาปัตยกรรม
 
@@ -30,8 +30,14 @@ Website เป็น consumer/presentation layer ของ accepted Skill catalo
 ### Distribution / Execution Layer
 วิธีติดตั้งหรือเรียกใช้บน ChatGPT, Codex หรือ agent environment อื่นเป็น adapter/distribution concern และต้องตรวจ compatibility ของ environment จริงก่อนสรุปความสามารถ
 
-### Restricted / Future Capability Layer
-ระบบ restricted distribution, entitlement หรือ ULTIMATE-specific access control ต้องมี architecture และ authority แยกต่างหาก ไม่ควรจำลอง security boundary ด้วย UI lock เพียงอย่างเดียว
+### Free Distribution & Naming Layer
+Skill ทุกตัวใน canonical catalog ต้องเป็น Free Skill: ไม่มี paid/premium/locked/restricted Skill tier, ไม่มี entitlement เพื่อปลดล็อกตัว Skill และไม่มี umbrella/codename ที่ใช้แทนชื่อหน้าที่จริงของ Skill
+
+ชื่อ Skill ต้องเป็น descriptive standalone name ที่ผู้ใช้เข้าใจ action หรือ outcome ได้โดยตรง เช่น `verify-before-claim` หรือ `define-the-real-problem` แทนชื่อ tier/codename หรือเลขโมดูล
+
+บริการภายนอกอาจมีค่าใช้จ่ายของผู้ให้บริการนั้นเองได้ แต่ต้องไม่ถูกใช้เป็น paywall ของโครงการ และ core Skill workflow ต้องไม่ถูกออกแบบให้พึ่ง paid-only capability โดยไม่มี free/manual fallback.
+
+รายละเอียดให้ยึด `docs/SKILL-NAMING-AND-FREE-ACCESS-POLICY_v0.1_TH-EN.md` เมื่อ policy ดังกล่าวอยู่บน canonical branch.
 
 ## 4. Source-of-Truth Model / โมเดลแหล่งความจริง
 
@@ -95,6 +101,8 @@ Reconciliation reports, reviews, superseded plans และ investigation artifa
 ภาษาไทยเป็นภาษาหลักสำหรับความเข้าใจของผู้ใช้ และเก็บคำอังกฤษสำหรับชื่อระบบ คำเทคนิค command, file, API, identifier และคำที่ช่วยลดความกำกวม
 
 เอกสารระบบหลักควรใช้ Thai–English เมื่อมีประโยชน์ต่อการใช้งานข้าม agent/platform โดยไม่จำเป็นต้องแปลทุกบรรทัดซ้ำหากทำให้เอกสารอ่านยาก
+
+ชื่อ Skill ที่ผู้ใช้เห็นต้องเน้นความเข้าใจทันทีและสื่อหน้าที่จริง หลีกเลี่ยงชื่อชั้น/tier หรือ codename ที่ต้องอาศัยบริบทภายในของโครงการจึงจะเข้าใจ
 
 ## 10. Governance Boundary
 
