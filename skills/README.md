@@ -4,6 +4,8 @@ Browse the collection by the work it supports. Each collection page links to its
 
 เลือกหมวดตามประเภทงานที่ต้องการ แต่ละหน้าหมวดอธิบายขอบเขตและลิงก์ไปยัง Skill ที่เกี่ยวข้อง
 
+> **Free Access Invariant:** ทุก Skill ที่อยู่ใน canonical catalog ต้องเข้าถึงและใช้งานตัว Skill ได้ฟรี ไม่มี paid/premium/locked/restricted Skill tier ของโครงการ และชื่อ Skill ต้องบอกหน้าที่จริงโดยตรง ไม่ใช้ umbrella tier หรือ codename แทนความหมายของ Skill
+
 | Collection | Use it for | Skills |
 |---|---|---|
 | [Foundation](foundation/README.md) / พื้นฐาน | Establish project context, resolve conflicts, and route work. / ตั้งบริบท แก้ความขัดแย้ง และเลือกขั้นตอนงาน | [setup-skill-context](foundation/setup-skill-context/SKILL.md), [reconcile-work-context](foundation/reconcile-work-context/SKILL.md), [choose-next-skill](foundation/choose-next-skill/SKILL.md), [stress-test-and-sharpen](foundation/stress-test-and-sharpen/SKILL.md) |
@@ -19,8 +21,16 @@ Start with Foundation when project identity, source of truth, or current state i
 
 เริ่มที่ Foundation เมื่อยังไม่ชัดว่าเป็นโปรเจกต์ใด ใช้แหล่งข้อมูลใด หรือสถานะปัจจุบันเป็นอย่างไร ใช้ Specification ก่อนพัฒนาเมื่อข้อกำหนดหรือเกณฑ์รับงานยังไม่ลงตัว งาน Design เป็น read-only โดยปริยายและอาจส่งต่อไป Implementation ได้ แต่การตัดสินใจด้าน Design ไม่ได้อนุญาตให้แก้โค้ด เผยแพร่ Deploy หรือแก้ Production โดยอัตโนมัติ การ Implement เริ่มได้เมื่อ task ปัจจุบันให้อำนาจอย่างชัดเจนเท่านั้น
 
+## Naming rule / กฎการตั้งชื่อ
+
+ใช้ชื่อ standalone ที่สื่อ action หรือ outcome ของ Skill ให้ผู้ใช้เข้าใจได้ทันที หลีกเลี่ยงคำ tier/codename เช่น `ULTIMATE`, `Premium`, `Pro`, `Elite` และหลีกเลี่ยงเลขโมดูลที่ไม่อธิบายหน้าที่จริง
+
+Shared governance หรือ interaction behavior ที่ใช้หลาย Skill ไม่ควรถูกทำให้ดูเหมือนเป็น Skill แยก หากมันไม่มีงาน standalone ที่ผู้ใช้เรียกใช้โดยตรง
+
 ## Category rule / กติกาการจัดหมวด
 
 Place a skill in the collection that describes its primary job. Use `domains/` only when a coherent domain-specific collection exists; do not create a new top-level category for a single loosely related topic. Keep this catalog and each collection README in sync with the skill folders.
 
 จัด Skill ตามหน้าที่หลัก ใช้ `domains/` เมื่อมีชุด Skill เฉพาะโดเมนที่มีเนื้อหาร่วมกันชัดเจน ไม่สร้างหมวดระดับบนใหม่เพียงเพราะมีหัวข้อเดียวที่ยังไม่สัมพันธ์กับชุดอื่น ต้องอัปเดตสารบัญนี้และ README ของหมวดให้ตรงกับโฟลเดอร์ Skill เสมอ
+
+ดูรายละเอียดที่ [Skill Naming & Free Access Policy](../docs/SKILL-NAMING-AND-FREE-ACCESS-POLICY_v0.1_TH-EN.md).
