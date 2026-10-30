@@ -130,6 +130,28 @@
 **IMPACT:** The reconstructed Website source is now the canonical current Website source on `main`. This promotion does **not** declare the reconstructed source an `APPROVED` or `FROZEN` Website baseline, does not erase its reconstruction provenance, and grants no deploy, publish, production, auth, secret, database/storage, billing, or other external mutation authority.  
 **EVIDENCE / NOTES:** PR #1 squash-merged successfully; canonical merge commit `7919801d4e05e35b568cb1827b619de741f7f22f`. Final pre-merge relation was `ahead 1 / behind 0`, `mergeable=true`, and all 45 changed files were under `website/`. Verification evidence includes RED run `40851389053`, GREEN/full run `40851733957`, and final tracked-lockfile verification run `40852160592` covering `npm ci`, full source tests, production build, and Chromium browser regression smoke. `website/README.md` and `website/source-provenance.json` intentionally retain reconstructed-candidate provenance language; a future Approved/Frozen Website baseline requires a separate Owner decision.
 
+## SKILL-DEC-010 — Descriptive Standalone Skill Naming
+
+**DATE:** 2026-10-30  
+**STATUS:** APPROVED  
+**DECISION:** ยกเลิกการใช้ `ULTIMATE` เป็น user-facing umbrella/tier/codename สำหรับ Skill และกำหนดให้ Skill ใช้ descriptive standalone name ที่บอกหน้าที่จริงและผู้ใช้เข้าใจได้ทันที. แนวคิด design ที่เก็บรักษาไว้เปลี่ยน identity เป็น `verify-before-claim` สำหรับ Epistemic Integrity & Verification และ `define-the-real-problem` สำหรับ Problem Framing & Failure Definition. `Internal Orchestration + Visible Checkpoints` เป็น shared interaction behavior ไม่ใช่ Skill แยก. แนวคิด Evidence Acquisition & Diagnostic Strategy ใช้ชื่อ candidate `gather-diagnostic-evidence` จนกว่าจะมี implementation approval.  
+**AUTHORITY:** Explicit Owner decision on 2026-10-30  
+**SCOPE:** Skill naming, future Skill identity, documentation terminology, Website/catalog presentation, preserved diagnostic design concepts  
+**SUPERSEDES:** Previous conceptual/user-facing use of `ULTIMATE` and numbered module labels as Skill identity. Historical records remain unchanged as evidence but no longer define current naming direction.  
+**IMPACT:** New or revised Skills must use names that describe action/outcome directly. No umbrella tier name is required to understand or invoke a Skill. This decision does not itself authorize runnable implementation of the renamed design concepts.  
+**EVIDENCE / NOTES:** Detailed policy candidate: `docs/SKILL-NAMING-AND-FREE-ACCESS-POLICY_v0.1_TH-EN.md`.
+
+## SKILL-DEC-011 — All Skills Must Be Free to Use
+
+**DATE:** 2026-10-30  
+**STATUS:** APPROVED  
+**DECISION:** หลังจากนี้ Skill ทุกตัวใน canonical catalog ต้องเข้าถึงและใช้งานตัว Skill ได้ฟรี โดยไม่มี paid/premium/locked/restricted Skill tier, project entitlement หรือ paywall เพื่อปลดล็อก Skill. Core Skill workflow ต้องไม่ถูกออกแบบให้พึ่ง paid-only capability โดยไม่มี free/manual fallback.  
+**AUTHORITY:** Explicit Owner decision on 2026-10-30  
+**SCOPE:** All current and future Skills, catalog, Website presentation, distribution design and Skill-local dependencies  
+**SUPERSEDES:** Previous conceptual direction for restricted/private/entitlement-gated Skill distribution or locked Skill access. This does not remove access controls needed for repository administration, production systems, secrets, private user/project data, or third-party accounts.  
+**IMPACT:** Canonical Skill catalog cannot contain paid or entitlement-gated Skills. Optional third-party integrations may have provider costs, but those costs cannot function as the project's Skill paywall and the core Skill workflow must retain a free/manual path.  
+**EVIDENCE / NOTES:** Repository license remains MIT. Platform/provider subscription costs are external to Skill pricing and must be disclosed when relevant.
+
 ---
 
 ## Pending / Unresolved Decisions
@@ -139,9 +161,10 @@
 - การ promote `SKILL-DEC-002`, `SKILL-DEC-003`, `SKILL-DEC-005`, `SKILL-DEC-006` จาก `CANDIDATE` เป็น `APPROVED`
 - การตัดสินว่า reconstructed Website source ควรถูกยกระดับเป็น `APPROVED` หรือ `FROZEN` Website baseline หรือไม่
 - สถานะระยะยาวของ reconciliation candidate / PR #11
-- ULTIMATE runnable repository/orchestration architecture
-- Codex Cloud rollout / distribution architecture
-- restricted distribution / entitlement implementation
+- Runnable implementation scope ของ `verify-before-claim`
+- Runnable implementation scope ของ `define-the-real-problem`
+- Scope/design decision สำหรับ candidate `gather-diagnostic-evidence`
+- Codex Cloud rollout / distribution architecture ภายใต้ Free Access Invariant
 
 ## Supersession Rule / กฎการแทนที่ Decision
 
