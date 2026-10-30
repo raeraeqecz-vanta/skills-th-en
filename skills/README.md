@@ -23,7 +23,7 @@ Start with Foundation when project identity, source of truth, or current state i
 
 ## Naming rule / กฎการตั้งชื่อ
 
-ใช้ชื่อ standalone ที่สื่อ action หรือ outcome ของ Skill ให้ผู้ใช้เข้าใจได้ทันที หลีกเลี่ยงคำ tier/codename เช่น `ULTIMATE`, `Premium`, `Pro`, `Elite` และหลีกเลี่ยงเลขโมดูลที่ไม่อธิบายหน้าที่จริง
+ใช้ชื่อ standalone ที่สื่อ action หรือ outcome ของ Skill ให้ผู้ใช้เข้าใจได้ทันที หลีกเลี่ยง tier/codename และเลขโมดูลที่ไม่อธิบายหน้าที่จริง
 
 Shared governance หรือ interaction behavior ที่ใช้หลาย Skill ไม่ควรถูกทำให้ดูเหมือนเป็น Skill แยก หากมันไม่มีงาน standalone ที่ผู้ใช้เรียกใช้โดยตรง
 
