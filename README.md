@@ -35,6 +35,20 @@ npx skills add raeraeqecz-vanta/skills-th-en --skill setup-skill-context
 - [Release / ส่งมอบ](skills/release/README.md) — release, handoff, and delivery readiness.
 - `domains/` — reserved for future domain-specific collections; create a domain collection when it has a coherent set of skills.
 
+## Free Access & Skill Naming / ใช้งานฟรีและชื่อ Skill ที่เข้าใจได้ทันที
+
+**ทุก Skill ใน canonical catalog ต้องใช้งานตัว Skill ได้ฟรี** ไม่มี paid tier, premium unlock, locked Skill หรือ entitlement-gated Skill ของโครงการ
+
+Every Skill in the canonical catalog must be available as a free Skill. The project does not use paid, premium, locked, or entitlement-gated Skill tiers.
+
+ชื่อ Skill ต้องบอกหน้าที่จริงของมันโดยตรงและเป็น standalone name ที่ผู้ใช้เข้าใจได้ทันที หลีกเลี่ยง tier/codename เช่น `ULTIMATE`, `Premium`, `Pro` หรือเลขโมดูลที่ไม่ได้อธิบายงานของ Skill
+
+Skill names must describe the actual job they perform. User-facing Skill identity should not depend on umbrella tiers, codenames, or module numbers.
+
+บริการภายนอกที่ผู้ใช้เลือกเชื่อมอาจมีค่าใช้จ่ายของผู้ให้บริการนั้นเอง แต่ต้องไม่ถูกใช้เป็น paywall เพื่อปลดล็อกตัว Skill และ core Skill workflow ไม่ควรถูกบังคับให้พึ่ง paid-only capability โดยไม่มี free/manual fallback.
+
+See [Skill Naming & Free Access Policy](docs/SKILL-NAMING-AND-FREE-ACCESS-POLICY_v0.1_TH-EN.md).
+
 ## Governance / การควบคุม
 
 ทุก Skill ต้องตรวจบริบท ความสามารถ ทรัพยากร สิทธิ์ และงานที่อาจชนกันก่อนดำเนินการ การตรวจพบ Connection ไม่เท่ากับการได้รับอนุญาตให้ใช้หรือแก้ไขระบบ
