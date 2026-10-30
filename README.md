@@ -41,7 +41,7 @@ npx skills add raeraeqecz-vanta/skills-th-en --skill setup-skill-context
 
 Every Skill in the canonical catalog must be available as a free Skill. The project does not use paid, premium, locked, or entitlement-gated Skill tiers.
 
-ชื่อ Skill ต้องบอกหน้าที่จริงของมันโดยตรงและเป็น standalone name ที่ผู้ใช้เข้าใจได้ทันที หลีกเลี่ยง tier/codename เช่น `ULTIMATE`, `Premium`, `Pro` หรือเลขโมดูลที่ไม่ได้อธิบายงานของ Skill
+ชื่อ Skill ต้องบอกหน้าที่จริงของมันโดยตรงและเป็น standalone name ที่ผู้ใช้เข้าใจได้ทันที หลีกเลี่ยง tier/codename หรือเลขโมดูลที่ไม่ได้อธิบายงานของ Skill
 
 Skill names must describe the actual job they perform. User-facing Skill identity should not depend on umbrella tiers, codenames, or module numbers.
 
