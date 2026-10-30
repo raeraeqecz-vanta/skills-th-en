@@ -4,7 +4,7 @@
 **Repository:** `raeraeqecz-vanta/skills-th-en`  
 **State Type:** Mutable execution snapshot  
 **Last Verified:** 2026-10-30 (Asia/Bangkok)  
-**Status:** CANONICAL CONTEXT + 12-SKILL CATALOG + WEBSITE SOURCE ACTIVE / POST-MERGE RECONCILED
+**Status:** CANONICAL CONTEXT + 12-SKILL CATALOG + WEBSITE SOURCE ACTIVE / NAMING + FREE-ACCESS GOVERNANCE CANDIDATE
 
 > This file is a recovery snapshot, not a permanent truth. Re-verify dynamic facts before execution-critical decisions.
 
@@ -12,194 +12,178 @@
 
 - Repository: `raeraeqecz-vanta/skills-th-en`
 - Default branch: `main`
+- Current verified `main` HEAD at this review: `2efa634df1c6758f46a57fdc42ade45a637c44c1`
 - Project Execution Context Foundation v0.1 canonical merge anchor: `41e804533610282dc0a3e1bd3b47c8c5b135ca0e`
 - UI/UX Skill Catalog canonical merge anchor: `ef5e014bf098a2c53f5b967cca028c1d3847d311`
 - Website Source `v0.7.6-rc.3` canonical merge anchor: `7919801d4e05e35b568cb1827b619de741f7f22f`
 - PR #13, PR #2, and PR #1 are merged into `main`
-- `AGENTS.md`, `CONTEXT.md`, `PROJECT_STATE.md`, and `DECISIONS.md` are canonical on `main`
 - Canonical Skill catalog indexes 12 Skills, including `ui-ux-master-craft`
-- Canonical current Website source is under `website/` and is synchronized to the 12-Skill catalog
-- Current `main` HEAD is dynamic and must be re-verified before execution-critical actions
+- Canonical current Website source is under `website/` and synchronized to the 12-Skill catalog
 
 ## 2. Current Work / งานปัจจุบัน
 
-**Workstream:** `POST-PR1 STATE RECONCILIATION / PR11 DISPOSITION TRIAGE`
+**Workstream:** `DESCRIPTIVE SKILL NAMING + FREE ACCESS GOVERNANCE`
 
-**Objective:** รักษา canonical execution state หลัง promote Website source ผ่าน PR #1 และตัดสินลำดับ review ของ reconciliation candidate PR #11 โดยไม่ตีความ historical reconciliation เป็น current truth
+**Working branch:** `codex/free-skills-naming-governance-v0.1`
 
-**Context Foundation state:** `PROMOTED TO MAIN / ACTIVE`
+**Objective:** นำ Owner decision วันที่ 2026-10-30 มาจัดทำเป็น candidate governance โดย:
 
-**UI/UX Catalog state:** `PROMOTED TO MAIN / ACTIVE`
+1. ยกเลิกการใช้ umbrella/tier/codename ที่ไม่บอกหน้าที่จริงของ Skill
+2. ใช้ descriptive standalone Skill names ที่ผู้ใช้เข้าใจได้ทันที
+3. กำหนด Free Access Invariant ว่า Skill ทุกตัวใน canonical catalog ต้องใช้งานตัว Skill ได้ฟรี
+4. ยกเลิกแนวคิด paid/premium/locked/restricted/entitlement-gated Skill access
+5. รักษา historical evidence โดยไม่ rewrite PR/เอกสารเก่า
 
-**Website Source state:** `PROMOTED TO MAIN / CANONICAL CURRENT SOURCE`
+**Current candidate naming:**
+- `verify-before-claim` — preserved Epistemic Integrity & Verification design; runnable implementation not yet approved
+- `define-the-real-problem` — preserved Problem Framing & Failure Definition design; runnable implementation not yet approved
+- `gather-diagnostic-evidence` — candidate future Skill identity; implementation scope not yet approved
+- `Internal Orchestration + Visible Checkpoints` remains shared interaction behavior, not a standalone Skill
 
-**Important baseline distinction:**
-- PR #1 promotion makes the reconstructed Website source the canonical current source on `main`
-- `website/README.md` and `website/source-provenance.json` still identify it as `RECONSTRUCTED SOURCE BASELINE CANDIDATE`
-- therefore canonical source placement does **not** equal an `APPROVED` or `FROZEN` Website baseline
-- changing that baseline status requires a separate Owner decision
+**Free Access Invariant:**
+- no paid/premium/locked/restricted Skill tier
+- no project entitlement/paywall to unlock a Skill
+- paid third-party integration may be optional, but core Skill workflow must retain a free/manual path
+- access control for production, secrets, repository administration, private accounts or user/project data remains separate and is not removed by this policy
 
-**Current execution posture:**
-- canonical context foundation is established
-- UI/UX Skill and 12-Skill catalog are canonical
-- Website source is canonical and source-level/build/browser verified before promotion
-- no Website deployment, publish, release, or production mutation is authorized or implied
-- PR #11 remains a stale historical reconciliation candidate against the older repository lineage
+## 3. Candidate Governance Changes / การเปลี่ยนแปลงบน Working Branch
 
-## 3. Canonical Context Files / ไฟล์บริบทหลัก
+Candidate scope currently includes:
 
-| File | Role | Current state |
-|---|---|---|
-| `AGENTS.md` | Startup, authority, mutation, handoff contract | Canonical on `main` |
-| `CONTEXT.md` | Stable project identity and architecture context | Canonical on `main` |
-| `PROJECT_STATE.md` | Mutable current execution snapshot | Canonical / post-PR1 reconciled |
-| `DECISIONS.md` | Durable decision ledger | Canonical; includes `SKILL-DEC-009` for Website source promotion |
+- `docs/SKILL-NAMING-AND-FREE-ACCESS-POLICY_v0.1_TH-EN.md`
+- `README.md`
+- `skills/README.md`
+- `CONTEXT.md`
+- `DECISIONS.md`
+- `PROJECT_STATE.md`
 
-Important: presence on `main` does not auto-promote decision records whose status remains `CANDIDATE`.
+New durable Owner decisions recorded in the candidate ledger:
 
-## 4. Promoted / Candidate / Historical Workstreams
+- `SKILL-DEC-010 — Descriptive Standalone Skill Naming`
+- `SKILL-DEC-011 — All Skills Must Be Free to Use`
 
-Dynamic state below was refreshed on 2026-10-30 and must still be re-verified immediately before any execution-critical action.
+These Owner decisions are explicit in the current work, but the repository files containing them are not canonical until separately promoted to `main`.
+
+## 4. Existing Promoted Workstreams
 
 ### PR #1 — Website Source
 - State: `MERGED`
-- Former head: `feat/website-source-baseline-v0.7.6-rc2`
-- Final candidate head before merge: `c01577fb19552c3220f79a8165193d68db5ccf57`
 - Canonical squash merge commit: `7919801d4e05e35b568cb1827b619de741f7f22f`
 - Version: `v0.7.6-rc.3`
-- Scope: 45 changed files, all under `website/`
-- Catalog: synchronized to canonical 12 Skills including `ui-ux-master-craft`
-- Verification: RED run `40851389053`; GREEN/full run `40851733957`; final tracked-lockfile run `40852160592`
-- Final verification covered: `npm ci`, full source tests, production build, Chromium browser regression smoke
+- Scope: Website source under `website/`
+- Catalog: synchronized to 12 Skills
+- Final verification before merge covered `npm ci`, source tests, production build, and Chromium browser regression smoke
 - Result: `PROMOTED TO MAIN / CANONICAL CURRENT SOURCE`
 - Durable decision: `SKILL-DEC-009`
 - Baseline note: reconstructed provenance remains; not declared `APPROVED` or `FROZEN` Website baseline
-- Runtime note: **NOT DEPLOYED by this promotion**
 
 ### PR #2 — UI/UX Skill + Catalog
 - State: `MERGED`
-- Former head: `codex/ui-ux-skill-catalog`
-- Final candidate head before merge: `d78c57ece98a54d7257194d7a987bbc7e5a2ac94`
 - Canonical squash merge commit: `ef5e014bf098a2c53f5b967cca028c1d3847d311`
-- Scope: `design/` collection, `ui-ux-master-craft`, repository catalog/collection indexes, root README and Skill System Guide taxonomy updates
 - Result: `PROMOTED TO MAIN / CANONICAL`
 - Durable decision: `SKILL-DEC-008`
-
-### PR #11 — Current State Reconciliation
-- State: `OPEN / DRAFT / NOT MERGED`
-- Head: `codex/current-state-reconciliation-v0.1`
-- Head SHA: `1c5d8ae9b51c040b6b28b3985b0ad99fad06f679`
-- Historical merge base: `5da20874d1d46f952bdcc4d37f88e546b0bdf1cf`
-- Current GitHub mergeability observation: `true`
-- Current branch relation vs `main`: `DIVERGED — ahead 10 / behind 8`
-- Scope: 10 documentation files under `docs/reconciliation/`, SCR-001 through SCR-008
-- Authority: evidence/reference candidate; not canonical execution state
-- Freshness status: `STALE / HISTORICAL RECONCILIATION EVIDENCE`
-- Important stale claims: PR #11 still describes `main` as the 11-Skill baseline and PR #1 / PR #2 as Draft candidates; those claims are no longer current truth
 
 ### PR #13 — Project Execution Context Foundation
 - State: `MERGED`
 - Canonical merge commit: `41e804533610282dc0a3e1bd3b47c8c5b135ca0e`
-- Scope: four root Markdown context files only
 - Result: `PROMOTED TO MAIN / ACTIVE`
 - Durable decision: `SKILL-DEC-007`
 
-## 5. Confirmed / ยืนยันแล้ว
+## 5. PR #11 — Historical Reconciliation Candidate
 
-- Canonical repository identity and default branch are verified
-- Project Execution Context Foundation v0.1 is canonical through PR #13
-- UI/UX Skill + 12-Skill catalog is canonical through PR #2
-- Website source `v0.7.6-rc.3` is canonical current source through PR #1
-- PR #1 was freshness-reviewed, amended onto current `main`, synchronized to 12 Skills, verified through TDD + clean install + test + production build + Chromium browser smoke, explicitly approved for merge, and squash-merged
-- `SKILL-DEC-007`, `SKILL-DEC-008`, and `SKILL-DEC-009` record the three promotion decisions
-- `SKILL-DEC-002`, `003`, `005`, `006` remain `CANDIDATE`; none of the promotion decisions change their status
-- Website reconstruction provenance remains visible and has not been silently converted into an Approved/Frozen Website baseline
-- No Website deploy, publish, production, auth, secret, storage/database, or billing mutation occurred as part of PR #1 promotion or this reconciliation
+- State at latest review: `OPEN / DRAFT / NOT MERGED`
+- Head: `codex/current-state-reconciliation-v0.1`
+- Head SHA: `1c5d8ae9b51c040b6b28b3985b0ad99fad06f679`
+- Historical merge base: `5da20874d1d46f952bdcc4d37f88e546b0bdf1cf`
+- Latest observed relation against `main@2efa634d...`: `DIVERGED — ahead 10 / behind 10`
+- Scope: 10 documentation files under `docs/reconciliation/`
+- Current classification: `STALE / HISTORICAL RECONCILIATION EVIDENCE`
+- Do not rewrite historical terminology merely to make the old PR look current
+- Any old naming, restricted-distribution, entitlement or locked-access direction in PR #11 is superseded by the explicit Owner decisions represented by `SKILL-DEC-010` and `SKILL-DEC-011`
 
-## 6. Stale / Conflict / Unknown / สถานะผิดปกติ
+### Latest SCR disposition review
+- SCR-001: `SUPERSEDED`
+- SCR-002: `SUPERSEDED`
+- SCR-003: `PARTIALLY REUSABLE`
+- SCR-004: design content reusable after renaming into descriptive Skill identities
+- SCR-005: `PARTIALLY REUSABLE`
+- SCR-006: `PARTIALLY REUSABLE`; avoid duplicating authority rules already canonical in root context
+- SCR-007: `SUPERSEDED`
+- SCR-008: `PARTIALLY REUSABLE`
 
-### STALE
-- PR #11 remains based on historical `main@5da20874...`, predating the context foundation, UI/UX catalog promotion, and Website source promotion
-- PR #11 statements that PR #1 / PR #2 remain Draft candidates or that `main` remains an 11-Skill baseline are historical evidence only
-- Any recorded PR mergeability, SHA relation, build result, deployment status, or test status must be refreshed before action
+Recommended PR #11 disposition remains `PARTIAL ABSORB`, then `RETAIN HISTORICAL + CLOSE` only after useful design knowledge is safely represented under the new naming/free-access policy and after separate Owner approval to close the PR.
 
-### CONFLICT
-- No blocking conflict identified in canonical context, Skill catalog, or canonical Website source
-- No current 11-vs-12 Skill catalog conflict remains in canonical Website source
-- PR #11 has semantic staleness against current canonical state; GitHub reporting `mergeable=true` does not make its historical claims current
+## 6. Confirmed Decisions / ยืนยันแล้ว
 
-### UNCONFIRMED / PENDING
-- Whether candidate decisions `SKILL-DEC-002`, `003`, `005`, `006` should be promoted to `APPROVED`
+- Canonical repository identity is unchanged
+- Existing 12-Skill public catalog remains canonical
+- Website current source remains canonical through PR #1
+- `SKILL-DEC-002`, `003`, `005`, `006` remain `CANDIDATE`; this work does not silently promote them
+- Owner explicitly removed the previous umbrella/tier naming direction on 2026-10-30
+- Owner explicitly decided that all Skills must be free to use on 2026-10-30
+- Historical documents remain historical evidence and do not override newer Owner decisions
+
+## 7. Pending / Unresolved
+
+- Promotion of this naming/free-access governance candidate to canonical `main`
+- Runnable implementation scope for `verify-before-claim`
+- Runnable implementation scope for `define-the-real-problem`
+- Scope/design decision for `gather-diagnostic-evidence`
+- Re-plan of PR #11 partial absorption using only descriptive Skill identities
+- Long-term disposition/closure of PR #11 after absorption
 - Whether reconstructed Website source should later become an `APPROVED` or `FROZEN` Website baseline
-- Whether PR #11 should be refreshed, superseded, partially absorbed, closed, or retained as historical reconciliation evidence
-- ULTIMATE runnable architecture and distribution boundaries
-- Codex Cloud rollout / distribution architecture
-- restricted distribution / entitlement implementation
+- Codex Cloud rollout/distribution architecture under the Free Access Invariant
+- Whether candidate decisions `SKILL-DEC-002`, `003`, `005`, `006` should become `APPROVED`
 
-## 7. Dependency & Impact / Dependency และผลกระทบ
+## 8. Dependency & Impact / Dependency และผลกระทบ
 
 ```text
 AGENTS / CONTEXT / PROJECT_STATE / DECISIONS
               |
+              +--> Naming + Free Access Policy
+              |        |
+              |        +--> Current + future Skill identities
+              |        +--> Catalog / Website presentation
+              |        +--> Distribution design
+              |
               +--> Canonical Skill source + 12-Skill catalog
                               |
-                              +--> Canonical Website source (presentation consumer)
-                              +--> Distribution / installer docs
-                              +--> ULTIMATE overlap analysis
+                              +--> Canonical Website source
                               +--> Codex / ChatGPT adapters
+                              +--> Future diagnostic Skills
 ```
 
-The Website layer is a consumer/presentation layer and must follow the accepted canonical Skill catalog rather than define a separate taxonomy.
+The Website and distribution layers consume the accepted Skill catalog and must not introduce a paid/restricted Skill tier or redefine Skill identity independently.
 
-## 8. Evidence Freshness Rules / กฎตรวจความสด
+## 9. Evidence Freshness Rules / กฎตรวจความสด
 
 Before any execution-critical next step:
 
 1. verify current `main` HEAD
 2. verify target branch / PR head
 3. compare target branch against current `main`
-4. verify PR state and mergeability
-5. inspect relevant diff and overlap with canonical context/governance/catalog
+4. verify PR state and mergeability when relevant
+5. inspect affected governance/catalog/Website overlap
 6. verify test/build/runtime/deployment evidence when applicable
 7. mark mismatch as `STALE`, `CONFLICT`, `UNCONFIRMED`, or `NOT APPLICABLE`
 
-Do not silently update Approved/Frozen decisions because runtime evidence changed; record the difference and evaluate impact first.
+## 10. Approval Boundary / ขอบเขตอนุมัติ
 
-## 9. Approval Boundary / ขอบเขตอนุมัติ
+**Currently allowed by this work:** prepare/review the isolated naming + free-access governance candidate and inspect historical PR #11 evidence.
 
-**Currently allowed:** repository evidence inspection, candidate freshness/disposition review, design/review proposals, and repository-local state reconciliation explicitly approved by the Owner.
+**Separate Owner approval required before:** merge/promotion of this branch to `main`, closing or rewriting PR #11, implementing new runnable Skills, release/deploy/publish, production mutation, auth/permission/secret/billing changes, database/storage migration, or irreversible actions.
 
-**Separate Owner approval required before:** merging or closing/superseding PR #11 when that action changes repository workflow state, declaring Website source `APPROVED`/`FROZEN`, release/deploy/publish, production mutation, auth/permission/secret/billing changes, database/storage migration, irreversible action, or changing another Approved/Frozen baseline.
+## 11. Recommended Next Action / ขั้นถัดไป
 
-## 10. Post-PR1 Reconciliation Result / ผลหลัง Merge PR #1
+**`NAMING + FREE ACCESS GOVERNANCE — FINAL REVIEW`**
 
-**Result:** `PASS — CANONICAL WEBSITE SOURCE ACTIVE / RUNTIME UNCHANGED`
+Required review:
+1. verify candidate branch is based on current `main`
+2. inspect changed files only
+3. ensure current governance does not retain restricted/paid Skill access as an active direction
+4. ensure descriptive names are clearly separated from implementation approval
+5. ensure historical PR #11 remains untouched
+6. classify candidate `PASS / AMEND / HOLD`
+7. present Owner promotion/merge decision gate
 
-Reconciliation confirms:
-
-- PR #1 is merged and canonical via `7919801d4e05e35b568cb1827b619de741f7f22f`
-- `SKILL-DEC-009` durably records the Website source promotion decision
-- canonical Website catalog is synchronized to 12 Skills
-- source verification gates passed before merge, including tracked-lockfile clean install, tests, production build, and Chromium browser smoke
-- reconstructed provenance remains explicit and no Approved/Frozen Website baseline is implied
-- no deploy or production mutation occurred
-- PR #11 remains Draft, diverged `ahead 10 / behind 8`, and historically stale where its claims conflict with current canonical evidence
-
-## 11. Next Action / ขั้นถัดไป
-
-**Recommended Next Action:** `PR #11 — RECONCILIATION CANDIDATE DISPOSITION + FRESHNESS REVIEW`
-
-Reason:
-- PR #1 and PR #2 are now canonical, resolving the two candidate workstreams that PR #11 originally analyzed
-- PR #11 is the remaining old-baseline reconciliation PR and is now 8 commits behind current `main`
-- several of its central state claims are knowingly historical
-- deciding its disposition prevents stale reconciliation material from being mistaken for a future promotion candidate
-
-Required next-step scope:
-1. re-verify `main` and PR #11 immediately before review
-2. inspect SCR-001 through SCR-008 against current canonical context, 12-Skill catalog, and Website source
-3. classify each reconciliation artifact as `STILL VALID / STALE / SUPERSEDED / PARTIALLY REUSABLE`
-4. recommend one disposition: `REFRESH`, `PARTIAL ABSORB`, `RETAIN HISTORICAL + CLOSE`, or `HOLD`
-5. present the Owner decision gate
-
-**No PR #11 merge, close, rewrite, or other repository mutation is authorized by this Next Action without separate Owner approval.**
+**No merge, deploy, production change, PR #11 closure, or runnable Skill implementation is authorized by this Next Action.**
